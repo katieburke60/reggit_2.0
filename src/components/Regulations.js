@@ -6,12 +6,19 @@ import {connect} from 'react-redux';
 
 
 class Regulations extends Component {
+
+
   render() {
+
+    let regulations = this.props.regulations.map((regulation) => {
+      return <li>{regulation.title}</li>
+    })
+    debugger
     return (
       <div className="container">
         <h1> Current Regulations </h1>
         <p> Make your voice heard</p>
-        
+        <ul>{regulations}</ul>
       </div>
     );
   }
