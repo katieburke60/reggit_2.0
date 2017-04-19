@@ -1,20 +1,17 @@
-
 import React, { Component } from 'react';
 // import axios from 'axios'
 import {connect} from 'react-redux';
 // import Sidebar from "./components/Sidebar"
 // import MainContent from "./components/MainContent"
-import Regulations from "./components/Regulations"
 
-class App extends Component {
+
+class Regulations extends Component {
   render() {
     return (
       <div className="container">
-        <h1> REGGIT </h1>
+        <h1> Current Regulations </h1>
         <p> Make your voice heard</p>
-        <Regulations />
-         {/* <Sidebar /> */}
-        {/* <MainContent />  */}
+        
       </div>
     );
   }
@@ -25,4 +22,4 @@ const mapStateToProps = (state) => {
     }
 
 }
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(Regulations);

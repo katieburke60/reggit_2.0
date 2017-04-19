@@ -17,7 +17,7 @@ axios
  store.dispatch({type: 'RECEIVE_REGULATIONS', regulations: data})
  ReactDOM.render(
    <Provider store={store}>
-     <App />   
+     <App />
    </Provider>,
    document.getElementById('root')
  );
