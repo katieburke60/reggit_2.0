@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1> REGGIT </h1>
+        <h1 className="titlename"> REGGIT </h1>
         <p> Make your voice heard</p>
         <Regulations />
          {/* <Sidebar /> */}
@@ -19,10 +19,11 @@ class App extends Component {
     );
   }
 }
-const mapStateToProps = (state) => {
-  return {
-      regulations: state.regulations
-    }
-
-}
-export default connect(mapStateToProps)(App);
+// const mapStateToProps = (state) => {
+//   return {
+//       regulations: state.regulations
+//     }
+//
+// }
+// mapStateToProps
+export default connect()(App);
