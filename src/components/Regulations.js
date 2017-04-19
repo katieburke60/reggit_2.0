@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 // import axios from 'axios'
 import {connect} from 'react-redux';
-// import Sidebar from "./components/Sidebar"
-// import MainContent from "./components/MainContent"
-
+import RegulationListItem from './RegulationsListItem'
 
 class Regulations extends Component {
 
-
   render() {
+    const regulations = this.props.regulations.map((regulation) => {
+        return <RegulationListItem
+          key={regulation.id}
+          regulation={regulation}
+        />
+      })
 
-    let regulations = this.props.regulations.map((regulation) => {
-      return <li>{regulation.title}</li>
-    })
-    debugger
     return (
       <div className="container">
         <h1> Current Regulations </h1>
@@ -27,6 +26,6 @@ const mapStateToProps = (state) => {
   return {
       regulations: state.regulations
     }
-
 }
+
 export default connect(mapStateToProps)(Regulations);
