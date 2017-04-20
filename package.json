@@ -10,6 +10,8 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "react-bootstrap": "^0.30.9",
     "react-scripts": "0.9.5"
   },
   "scripts": {
