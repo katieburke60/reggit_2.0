@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const Comment = (props) => {
+const Vote = (props) => {
+  debugger
   return (
     <li>
-      {props.comment_body}
+      {props.vote}
     </li>
 )}
 
-export default connect()(Comment)
+export default connect()(Vote)

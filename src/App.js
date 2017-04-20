@@ -8,8 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="titlename"> REGGIT </h1>
-        <p> Make your voice heard</p>
+        <h1 className="titlename"> Reggit: Get heard </h1>
          {this.props.regulation && this.props.regulation.id ? <SelectedRegulation /> : <Regulations />}
       </div>
     );

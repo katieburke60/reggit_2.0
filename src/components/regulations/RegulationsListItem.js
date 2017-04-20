@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getRegulation } from '../actions'
+import { getRegulation } from '../../actions'
+
 
 const RegulationListItem = (props) => {
   return (
