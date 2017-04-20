@@ -1,8 +1,9 @@
-import 'bootstrap/less/bootstrap.less'
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Regulations from "./components/regulations/Regulations"
-import SelectedRegulation from "./components/regulations/SelectedRegulation"
+// import 'bootstrap/less/bootstrap.less'
+import { connect } from 'react-redux'
+import Regulations from './components/regulations/Regulations'
+import SelectedRegulation from './components/regulations/SelectedRegulation'
+import React, { Component } from 'react'
+// import { Navbar, Jumbotron, Button } from 'react-bootstrap'
 
 class App extends Component {
   render() {
