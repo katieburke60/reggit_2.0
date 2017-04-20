@@ -1,6 +1,5 @@
-// Need to change porportions [] to correct
-
-export default (state={source: "Select a Regulation", proportions:[]}, action) => {
+export default (state={}, action) => {
+  //should comments, votes, etc. go here like we did with proportion?
   switch (action.type) {
     case "SET_CURRENT_REGULATION":
       return action.regulation
