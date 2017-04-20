@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-// import axios from 'axios'
 import {connect} from 'react-redux';
-import RegulationListItem from './RegulationsListItem'
 
 class Regulations extends Component {
+
+import RegulationListItem from './RegulationsListItem'
 
   render() {
     const regulations = this.props.regulations.map((regulation) => {
