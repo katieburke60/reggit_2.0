@@ -1,8 +1,8 @@
 import 'bootstrap/less/bootstrap.less'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Regulations from "./components/Regulations"
-import SelectedRegulation from "./components/SelectedRegulation"
+import Regulations from "./components/regulations/Regulations"
+import SelectedRegulation from "./components/regulations/SelectedRegulation"
 
 class App extends Component {
   render() {

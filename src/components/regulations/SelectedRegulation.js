@@ -1,5 +1,3 @@
-//this page is not being hit
-
 import React from 'react'
 import { connect } from 'react-redux'
 import MainContent from './MainContent'
