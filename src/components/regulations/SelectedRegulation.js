@@ -7,12 +7,11 @@ import RegulationBlob from '../currentRegulation/body/RegulationBlob'
 class SelectedRegulation extends Component {
   render() {
     return (
-  <div className="col-xs-4">
+  <div className="col-xs-10">
     <p><VoteList key={this.props.regulation.id} votes={this.props.regulation.votes}/></p>
     <p><CommentList key={this.props.regulation.id} comments={this.props.regulation.comments}/></p>
     <p><RegulationBlob key={this.props.regulation.id} body={this.props.regulation.regulation_body}/></p>
   </div>
-  //QUESTION: Can you just do something like regulation_body.html_blob here?
 )}
 }
 

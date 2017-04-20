@@ -21,7 +21,7 @@ class Regulations extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-      regulations: state.regulations
+      regulations: state.regulations.filtered
     }
 }
 

@@ -1,0 +1,23 @@
+(1) Improve the way that a selected regulation renders to the page
+VOTES
+- Count the up and down votes
+- Visualize in some sort of chart
+- Put the chart as a box above the comments box
+COMMENTS
+- Put in a more visually compelling way
+- Have them go down the right side of the screen
+- [Longer-term] have it so that you can click something to see or hide the box of comments
+OVERALL
+- Back button to go back to the full list of regulations
+
+(2) Add components, reducers, and actions to allow for voting and comment submission
+
+(3) Add basic functionality to make more visually appealing
+- Add bootstrap
+
+(4) Create a login and authenticate users
+
+
+Longer-term ideas
+- Allow people to highlight and comment on specific portion of the rules
+- Have a formal comment box for submission to agencies
