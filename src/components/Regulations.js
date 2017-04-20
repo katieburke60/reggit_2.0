@@ -4,10 +4,7 @@ import {connect} from 'react-redux';
 // import Sidebar from "./components/Sidebar"
 // import MainContent from "./components/MainContent"
 
-
 class Regulations extends Component {
-
-
   render() {
 
     let regulations = this.props.regulations.map((regulation) => {
