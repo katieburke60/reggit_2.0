@@ -1,29 +1,24 @@
-
+import 'bootstrap/less/bootstrap.less'
 import React, { Component } from 'react';
-// import axios from 'axios'
-import {connect} from 'react-redux';
-// import Sidebar from "./components/Sidebar"
-// import MainContent from "./components/MainContent"
-import Regulations from "./components/Regulations"
+import { connect } from 'react-redux';
+import Regulations from "./components/regulations/Regulations"
+import SelectedRegulation from "./components/regulations/SelectedRegulation"
 
 class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="titlename"> REGGIT </h1>
-        <p> Make your voice heard</p>
-        <Regulations />
-         {/* <Sidebar /> */}
-        {/* <MainContent />  */}
+        <h1 className="titlename"> Reggit: Get heard </h1>
+         {this.props.regulation && this.props.regulation.id ? <SelectedRegulation /> : <Regulations />}
       </div>
     );
   }
 }
-// const mapStateToProps = (state) => {
-//   return {
-//       regulations: state.regulations
-//     }
-//
-// }
-// mapStateToProps
-export default connect()(App);
+
+const mapStateToProps = (state) => {
+  return {
+    regulation: state.currentRegulation
+  }
+}
+
+export default connect(mapStateToProps)(App);
