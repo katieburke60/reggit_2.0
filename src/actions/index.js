@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 export const getRegulation = (regulation) => {
   return (dispatch) => {
     // 👺
@@ -9,6 +10,8 @@ export const getRegulation = (regulation) => {
         // 😇
         debugger
         dispatch({type: "SET_CURRENT_REGULATION", regulation: data})
+        dispatch({type: "ADD_VOTE", vote: data})
+        dispatch({type: :"DELETE_VOTE", vote: data})
       })
   }
 }
