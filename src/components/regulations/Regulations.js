@@ -13,9 +13,8 @@ class Regulations extends Component {
 
     return (
       <div className="container">
-        <h1> Current Regulations </h1>
-        <p> Make your voice heard</p>
-        <ul>{regulations}</ul>
+        <h2> Regulations that you can give feedback about today </h2>
+        <ol>{regulations}</ol>
       </div>
     );
   }
