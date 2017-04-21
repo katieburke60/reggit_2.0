@@ -14,7 +14,6 @@ export const getRegulationList = () => {
 }
 
 export const getRegulation = (regulation) => {
-  debugger
   return (dispatch) => {
     axios
     .get(`http://localhost:4000/regulations/${regulation.id}`)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import FlatButton from 'material-ui/FlatButton';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-class VoteArrow extends Component {
+// import FlatButton from 'material-ui/FlatButton';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+class UpAndDownvote extends Component {
 
   constructor(props) {
     super(props);
@@ -11,14 +11,21 @@ class VoteArrow extends Component {
       disabledDownvote: false
     }
 
+  //  this.setState(function(prevState, props) {
+  //    return {
+  //      counter: prevState.counter + props.increment
+  //   };
+  // });
+
     this.handleUpvoteClicked = this.handleUpvoteClicked.bind(this);
     this.handleDownvoteClicked = this.handleDownvoteClicked.bind(this);
   }
 
   handleUpvoteClicked() {
-    
+
     if (!this.state.disabledUpvote) {
       this.setState({
+        // counter: counter + 1,
         disabledUpvote: true,
         disabledDownvote: false
       });
@@ -28,6 +35,7 @@ class VoteArrow extends Component {
   handleDownvoteClicked() {
     if (!this.state.disabledDownvote) {
       this.setState({
+        // counter: counter - 1,
         disabledUpvote: false,
         disabledDownvote: true
       });
@@ -39,20 +47,21 @@ class VoteArrow extends Component {
     return (
       <div className="votes-container">
         <div style={{ textAlign: "right" }}>
-          <FlatButton
+          <button
             label="Upvote"
-            primary={true}
+
             disabled={this.state.disabledUpvote}
-            onClick={this.handleUpvoteClicked} />
-          <FlatButton
+            onClick={this.handleUpvoteClicked}>Support</button>
+
+          <button
             label="Downvote"
-            secondary={true}
+          
             disabled={this.state.disabledDownvote}
-            onClick={this.handleDownvoteClicked} />
+            onClick={this.handleDownvoteClicked}>Disagree</button>
         </div>
       </div>
     );
   }
 }
 
-export default VoteArrow;
+export default UpAndDownvote;

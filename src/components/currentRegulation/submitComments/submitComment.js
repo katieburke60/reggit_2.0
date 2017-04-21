@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
 
 class SubmitComment extends Component {
 
@@ -17,17 +18,15 @@ class SubmitComment extends Component {
 
     handleSubmit(event) {
       event.prevetnDefault();
-      this.props.onSubmit({
-        value
-      })
-    }
+    //   this.props.dispatch(submitComment(regulationId, commentBody))
+ }
 
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
           <div className="addcomment-container">
-              <p>Add your comment about this regulation.</p>
-              <textarea rows="10" cols=90% value={this.state.value} onChange={this.handleChange}></textarea>
+              <h3>Speak Up!</h3>
+              <textarea rows="10" cols="50" value={this.state.value} onChange={this.handleChange}></textarea>
               <input type="submit" value="Submit your Voice!" />
           </div>
         </form>
@@ -36,4 +35,4 @@ class SubmitComment extends Component {
 
 }
 
-export default SubmitComment;
+export default connect()(SubmitComment);
