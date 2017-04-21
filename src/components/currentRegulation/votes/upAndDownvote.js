@@ -16,6 +16,7 @@ class VoteArrow extends Component {
   }
 
   handleUpvoteClicked() {
+    
     if (!this.state.disabledUpvote) {
       this.setState({
         disabledUpvote: true,
