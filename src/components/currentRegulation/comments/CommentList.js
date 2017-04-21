@@ -1,8 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import Comment from './Comment'
 
-const CommentList = (props) => {
+export default (props) => {
   return (
     <div>
       <h3>What people are saying about this rule</h3>
@@ -16,5 +15,3 @@ const CommentList = (props) => {
     </div>
   )
 }
-
-export default connect()(CommentList)

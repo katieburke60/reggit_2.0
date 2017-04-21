@@ -14,20 +14,36 @@ import 'bootstrap/dist/css/bootstrap-theme.css'
 const store = createStore(
   rootReducer,
   compose(
-  applyMiddleware(thunk),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 )
 
-axios
-.get('http://localhost:4000/regulations')
-.then(({data}) => {
- store.dispatch({type: 'RECEIVE_REGULATIONS', regulations: data})
+function getRegulations (){
+  return (dispatch) => {
+    axios
+    .get('http://localhost:4000/regulations')
+    .then(({data}) => {
+      dispatch({type: 'RECEIVE_REGULATIONS', regulations: data})
+    })
+  }
+}
+function getCategories (){
+  return (dispatch) => {
+    axios
+      .get('http://localhost:4000/categories')
+      .then(({data}) => {
+       dispatch({type: 'RECEIVE CATEGORIES', categories: data})
+     })
+   }
+}
 
- ReactDOM.render(
-   <Provider store={store}>
-     <App />
-   </Provider>,
-   document.getElementById('root')
- );
-})
+store.dispatch(getRegulations())
+store.dispatch(getCategories())
+
+ReactDOM.render(
+ <Provider store={store}>
+   <App />
+ </Provider>,
+ document.getElementById('root')
+);

@@ -1,0 +1,30 @@
+// dispatch({type: "FILTER_REGULATIONS", filter: "all"})
+
+// action = {
+//   type: "FILTER_REGULATIONS_CATEGORY",
+//   filter: {
+//     category: "transportation",
+//     categories: ["transportation", "education"]
+//   }
+// }
+
+    // case "FILTER_REGULATIONS_BY_CATEGORY":
+    //   return Object.assign({}, state, {
+    //     filtered: state.all.filter((regulation) => regulation.category === action.filter.category )
+    //   })
+    // case "FILTER_REGULATIONS_BY_CATEGORIES":
+    //   let regulations = []
+    //   action.filter.categories.forEach((cat) => {
+    //     regulations.concat(state.all.filter((regulation) => regulation.category === cat ))
+    //   })
+    //   return Object.assign({}, state, {
+    //     filtered: regulations
+    //   })
+    // case "FILTER_REGULATIONS_BY_CATEGORIES":
+    //   return Object.assign({}, state, {
+    //     filtered: regulations
+    //   })
+    // case "FILTER_REGULATIONS_BY_CATEGORIES":
+    //   return Object.assign({}, state, {
+    //     filtered: regulations
+    //   })
