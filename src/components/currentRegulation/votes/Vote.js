@@ -8,5 +8,3 @@ const Vote = (props) => {
       {props.vote}
     </li>
 )}
-
-export default connect()(Vote)

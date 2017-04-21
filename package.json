@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "material-ui": "^0.17.4",
     "react": "^15.5.4",
     "react-bootstrap": "^0.30.9",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
+    "react-router-redux": "^4.0.8",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0"
   },

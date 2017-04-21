@@ -8,9 +8,9 @@ class SelectedRegulation extends Component {
   render() {
     return (
   <div className="col-xs-10">
-    <p><VoteList key={this.props.regulation.id} votes={this.props.regulation.votes}/></p>
-    <p><CommentList key={this.props.regulation.id} comments={this.props.regulation.comments}/></p>
-    <p><RegulationBlob key={this.props.regulation.id} body={this.props.regulation.regulation_body}/></p>
+    <VoteList votes={this.props.regulation.votes}/>
+    <CommentList comments={this.props.regulation.comments}/>
+    <RegulationBlob body={this.props.regulation.regulation_body}/>
   </div>
 )}
 }
