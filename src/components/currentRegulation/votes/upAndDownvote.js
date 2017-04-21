@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 // import FlatButton from 'material-ui/FlatButton';
 // import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -65,3 +66,4 @@ class UpAndDownvote extends Component {
 }
 
 export default UpAndDownvote;
+

@@ -4,7 +4,6 @@ import { getRegulation } from '../../actions'
 import '../../App.css'
 
 
-
 const RegulationListItem = (props) => {
   return (
     <div>
