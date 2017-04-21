@@ -14,10 +14,7 @@ export default class VoteList extends React.Component {
   render() {
     return (
       <div>
-        <h3>Votes in favor of this regulation</h3>
-        <ul>
-          {this.renderVotes()}
-        </ul>
+      
       </div>
     )
   }
