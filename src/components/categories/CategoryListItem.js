@@ -2,11 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const CategoryListItem = (props) => {
-  return (
-    <div>
-      <button key={props.id}>{props.name}</button>
-    </div>
-  )
+  return <button key={props.id} className="btn-cat btn-outline-default btn-sm btn-space">
+    {props.name.charAt(0).toUpperCase() + props.name.slice(1)}</button>
 }
 
 export default connect()(CategoryListItem);

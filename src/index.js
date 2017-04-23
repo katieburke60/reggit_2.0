@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
@@ -6,8 +8,8 @@ import { Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import App from './App';
 import rootReducer from './reducers'
-import Vote_arrow from './components/currentRegulation/votes/upAndDownvote'
-// import './index.css'
+// import Vote_arrow from './components/currentRegulation/votes/upAndDownvote'
+import './index.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 
@@ -18,6 +20,15 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 )
+function getCategories (){
+  return (dispatch) => {
+    axios
+    .get('http://localhost:4000/categories')
+    .then(({data}) => {
+      dispatch({type: 'RECEIVE_CATEGORIES', categories: data})
+   })
+  }
+}
 
 function getRegulations (){
   return (dispatch) => {
@@ -28,18 +39,9 @@ function getRegulations (){
     })
   }
 }
-function getCategories (){
-  return (dispatch) => {
-    axios
-      .get('http://localhost:4000/categories')
-      .then(({data}) => {
-       dispatch({type: 'RECEIVE CATEGORIES', categories: data})
-     })
-   }
-}
 
-store.dispatch(getRegulations())
 store.dispatch(getCategories())
+store.dispatch(getRegulations())
 
 ReactDOM.render(
  <Provider store={store}>
