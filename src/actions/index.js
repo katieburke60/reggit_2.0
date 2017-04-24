@@ -24,11 +24,20 @@ export const getRegulation = (regulation) => {
 }
 export const addVote = (regulation, vote) => {
   return(dispatch) => {
-    axios
-    .post(`http://localhost:4000/votes`)
-    .then(({data}) => {
-      debugger
-      dispatch({type:"SUBMIT_VOTE", votes: data})
-    })
-  }
+    axios({
+      method: 'POST',
+      url: `http://localhost:4000/votes`,
+      dataType: "json",
+      data: {
+        vote: vote,
+        regulation_id: regulation.id
+      },
+      // success: function(data) {
+      //   alert(data[1]);
+      // },
+      // error: function(data){
+      //   alert("fail");
+      // }
+      })
+    }
 }

@@ -9,7 +9,7 @@ import thunk from 'redux-thunk'
 import App from './App';
 import rootReducer from './reducers'
 import './index.css'
-import UpAndDownvote from './components/currentRegulation/votes/UpAndDownvote'
+import UpAndDownvote from './components/currentRegulation/votes/upAndDownvote'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
