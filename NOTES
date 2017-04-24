@@ -1,14 +1,18 @@
-Tonight
-1. Finalize filter action (including trying to do votes)
-- Array method to count number of objects with a certain value
-  if vote.vote === "up"
-  votes.length
-- comments.length
+*Votes reducer updates when it receives set current (votes, etc.)
 
-2. Add routes
-3. Read basic Bootstrap documentation
-4. Put stuff in right places on the page
-5. (maybe) generate add'l ideas for functionality
+CurrentRegulationVotes
+  for: 10,
+  against: 30,
+  voted: null || for || against
+}}
+*If it's for or against you can't vote again
+
+- submit_vote (reg_id, for / against) --> dispatch as a thunk post
+- dispatch type (update votes and data)
+- Gives you back the new votes and reducer will emit update votes (response from the server should include ours)
+
+ (thunk with whether you voted for or against)
+
 
 TO DOS
 

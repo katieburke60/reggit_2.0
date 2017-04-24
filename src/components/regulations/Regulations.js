@@ -1,7 +1,7 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RegulationListItem from './RegulationsListItem'
-import CategoryList from '../categories/CategoryList'
 
 class Regulations extends Component {
   render() {
@@ -15,7 +15,6 @@ class Regulations extends Component {
 
     return (
       <div className="container">
-        {<CategoryList />}
         <h2> Regulations that you can give feedback about today </h2>
         <ol>{regulations}</ol>
       </div>

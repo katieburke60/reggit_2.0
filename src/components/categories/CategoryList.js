@@ -12,7 +12,6 @@ class CategoryList extends Component {
     })
     return (
       <div className="container">
-        <h4> Categories </h4>
         <p>{categories}</p>
       </div>
     );

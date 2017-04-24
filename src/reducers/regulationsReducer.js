@@ -5,7 +5,6 @@ export default (state={all: [], filtered: []}, action) => {
         all: action.regulations,
         filtered: action.regulations,
       }
-
     // case "FILTER_CATEGORY":
     //   return {
     //     all: state.all,
