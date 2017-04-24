@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 *Votes reducer updates when it receives set current (votes, etc.)
 
 CurrentRegulationVotes
@@ -13,6 +14,19 @@ CurrentRegulationVotes
 
  (thunk with whether you voted for or against)
 
+=======
+Tonight
+1. Finalize filter action (including trying to do votes)
+- Array method to count number of objects with a certain value
+  if vote.vote === "up"
+  votes.length
+- comments.length
+
+2. Add routes
+3. Read basic Bootstrap documentation
+4. Put stuff in right places on the page
+5. (maybe) generate add'l ideas for functionality
+>>>>>>> Stashed changes
 
 TO DOS
 

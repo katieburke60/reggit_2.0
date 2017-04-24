@@ -33,10 +33,6 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 )
-
-
-
-
 // store.dispatch(getRegulations())
 
 
@@ -58,6 +54,6 @@ ReactDOM.render(
        <Route exact path='/regulations/:regulationId' component={SelectedRegulation} />
     </div>
    </Router>
- </Provider>,
- document.getElementById('root')
-);
+ </Provider>
+  document.getElementById('root')
+)
