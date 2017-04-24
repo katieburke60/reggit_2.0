@@ -6,7 +6,6 @@ export const getRegulations = () => {
       .get(`http://localhost:4000/regulations`)
       .then(({data}) => {
         dispatch({type: "RECEIVE_REGULATIONS", regulations: data})
-
       })
   }
 }
@@ -23,6 +22,7 @@ export const getCategories = () => {
 
 export const getRegulation = (regulationId) => {
   return (dispatch) => {
+
     axios
     .get(`http://localhost:4000/regulations/${regulationId}`)
       .then(({data}) => {
@@ -30,22 +30,16 @@ export const getRegulation = (regulationId) => {
       })
   }
 }
-
-// export function addVote(vote, regulation){
-//   return (dispatch) => {
-//     axios
-//       .post(`http://localhost:4000/regulations/${regulation.id}`, vote, {
-//       //   headers:
-//       //   ...
-//       // })
-//       .then(({data}) => {
-//         dispatch({
-//           type: "SUBMIT_VOTE",
-//           vote: data
-//         })
-//       })
-//       .catch((errors)=>{
-//         console.log(errors)
-//       })
-//   }
-// }
+export const addVote = (regulation, vote) => {
+  return(dispatch) => {
+    axios({
+      method: 'POST',
+      url: `http://localhost:4000/votes`,
+      dataType: "json",
+      data: {
+        vote: vote,
+        regulation_id: regulation.id
+      },
+      })
+    }
+}

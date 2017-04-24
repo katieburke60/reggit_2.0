@@ -7,6 +7,8 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import './index.css'
+
+import UpAndDownvote from './components/currentRegulation/votes/upAndDownvote'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import SelectedRegulation from './components/regulations/SelectedRegulation'
