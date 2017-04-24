@@ -1,8 +1,8 @@
+/* eslint-disable */
 import React from 'react'
 import { connect } from 'react-redux'
 import { getRegulation } from '../../actions'
 import '../../App.css'
-
 
 
 const RegulationListItem = (props) => {

@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const Vote = (props) => {
-debugger
+export default (props) => {
   return (
     <li>
       {props.vote}

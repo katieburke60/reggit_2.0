@@ -1,19 +1,45 @@
+*Votes reducer updates when it receives set current (votes, etc.)
+
+CurrentRegulationVotes
+  for: 10,
+  against: 30,
+  voted: null || for || against
+}}
+*If it's for or against you can't vote again
+
+- submit_vote (reg_id, for / against) --> dispatch as a thunk post
+- dispatch type (update votes and data)
+- Gives you back the new votes and reducer will emit update votes (response from the server should include ours)
+
+ (thunk with whether you voted for or against)
+
+
+TO DOS
+
+(1) Add a filter action
+*Fix these
+
+(2) Add routes
+*Watch Steven video
+--
+
 (1) Improve the way that a selected regulation renders to the page
 VOTES
-- Count the up and down votes
+- Count the up and down votes (should be an enumerable for this)
 - Visualize in some sort of chart
+- Add a voteGraph component
 - Put the chart as a box above the comments box
 COMMENTS
 - Put in a more visually compelling way
 - Have them go down the right side of the screen
 - [Longer-term] have it so that you can click something to see or hide the box of comments
 OVERALL
-- Back button to go back to the full list of regulations
+- ADD NAVIGATION BAR (including full list option)
+- Way to remove current regulation from the store so that it renders full list again
 
 (2) Add components, reducers, and actions to allow for voting and comment submission
 
-(3) Add basic functionality to make more visually appealing
-- Add bootstrap
+(3) Improve layout and visuals for the regulations list page
 
 (4) Create a login and authenticate users
 
