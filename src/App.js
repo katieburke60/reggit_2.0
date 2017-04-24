@@ -5,15 +5,11 @@ import CategoryList from './components/categories/CategoryList'
 import SelectedRegulation from './components/regulations/SelectedRegulation'
 import './App.css'
 import { Route } from 'react-router-dom'
-
-import { connect } from 'react-redux'
 import React, { Component } from 'react'
 
 class App extends Component {
   render() {
-    re
-
-    turn (
+    return (
       <div className="container">
         <h1 className="titlename"> Reggit: Get heard </h1>
         <div>{<CategoryList />}</div>
