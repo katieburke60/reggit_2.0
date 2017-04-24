@@ -8,8 +8,9 @@ import { Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import App from './App';
 import rootReducer from './reducers'
-// import Vote_arrow from './components/currentRegulation/votes/upAndDownvote'
 import './index.css'
+import UpAndDownvote from './components/currentRegulation/votes/UpAndDownvote'
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 
