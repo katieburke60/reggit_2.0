@@ -17,7 +17,7 @@ class SelectedRegulation extends Component {
     <RegulationBlob body={this.props.regulation.regulation_body}/>
   </div>
   <div className="col-xs-2">
-    <UpAndDownvote votes={this.props.regulation.vote}/>
+    <UpAndDownvote regulation={this.props.regulation}/>
     <SubmitComment value={this.props.regulation.comments}/>
 
   </div>
@@ -26,8 +26,11 @@ class SelectedRegulation extends Component {
 }
 
 const mapStateToProps = (state) => {
+
   return {
+
     regulation: state.currentRegulation
+
   }
 }
 

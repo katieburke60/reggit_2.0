@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import SelectedRegulation from '../components/regulations'
+import SelectedRegulation from '../components/regulations/SelectedRegulation'
 
-
-  swtich (action.type){
+export default (state={all:[]}, action) => {
+  switch(action.type) {
     case 'SUBMIT_VOTE':
-
-    return {count: state.count+1}
-
-    case 'Decrease_count':
-    return {count:state.count-1}
-
+      return ({
+        all: action.votes
+      })
     default:
-    return state,
-  }
+      return state
+    }
+}

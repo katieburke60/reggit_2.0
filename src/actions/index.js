@@ -1,12 +1,11 @@
 import axios from 'axios'
 
 export const getRegulationList = () => {
-
   return (dispatch) => {
     axios
       .get(`http://localhost:4000/regulations`)
       .then(({data}) => {
-        debugger
+
         dispatch({type: "RECEIVE_REGULATIONS", regulation: data})
 
       })
@@ -15,6 +14,7 @@ export const getRegulationList = () => {
 
 export const getRegulation = (regulation) => {
   return (dispatch) => {
+
     axios
     .get(`http://localhost:4000/regulations/${regulation.id}`)
       .then(({data}) => {
@@ -22,22 +22,13 @@ export const getRegulation = (regulation) => {
       })
   }
 }
-
-// export function addVote(vote, regulation){
-//   return (dispatch) => {
-//     axios
-//       .post(`http://localhost:4000/regulations/${regulation.id}`, vote, {
-//       //   headers:
-//       //   ...
-//       // })
-//       .then(({data}) => {
-//         dispatch({
-//           type: "SUBMIT_VOTE",
-//           vote: data
-//         })
-//       })
-//       .catch((errors)=>{
-//         console.log(errors)
-//       })
-//   }
-// }
+export const addVote = (regulation, vote) => {
+  return(dispatch) => {
+    axios
+    .post(`http://localhost:4000/votes`)
+    .then(({data}) => {
+      debugger
+      dispatch({type:"SUBMIT_VOTE", votes: data})
+    })
+  }
+}
