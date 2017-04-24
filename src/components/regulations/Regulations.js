@@ -2,8 +2,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RegulationListItem from './RegulationsListItem'
+import { getCategories, getRegulations } from '../../actions'
 
 class Regulations extends Component {
+  componentDidMount(){
+    this.props.dispatch(getCategories())
+    this.props.dispatch(getRegulations())
+  }
   render() {
     const regulations = this.props.regulations.map((regulation) => {
         return <RegulationListItem
@@ -12,10 +17,9 @@ class Regulations extends Component {
 
         />
       })
-
     return (
       <div className="container">
-        <div className="col-md-8">
+        <div className="col-md-9">
           <h2> What's Happening? </h2>
           {regulations}
         </div>
@@ -25,7 +29,6 @@ class Regulations extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    //TODO: need to figure out how to make filtered equal to all in some situations
       regulations: state.regulations.filtered
     }
 }
