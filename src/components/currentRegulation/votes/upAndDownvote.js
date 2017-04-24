@@ -6,21 +6,20 @@ import RegulationBlob from '../body/RegulationBlob'
 import SelectedRegulation from '../../regulations/SelectedRegulation'
 import { addVote } from '../../../actions'
 
-class UpAndDownvote extends Component {
+class UpAndDownVote extends Component {
 
   constructor(props) {
     super(props);
 
-    this.handleDownVoteClicked = this.handleDownvoteClicked.bind(this);
+    this.handleDownVoteClicked = this.handleDownVoteClicked.bind(this);
   }
 
   handleDownVoteClicked (event) {
     event.preventDefault();
-    this.props.submitVote(this.props.regulation, event.value.target)
+    this.props.submitVote(this.props.regulation, "down")
   }
 
   render() {
-
     return (
       <div style={{color: 'red'}} className="votes-container">
           <button onClick={this.handleDownVoteClicked}>Disagree</button>
