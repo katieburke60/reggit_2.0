@@ -1,11 +1,28 @@
 .btn-space {
-    margin-right: 5px;
+    margin-right: 0px;
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.btn-main {
+  color: #FDFBF2;
+  background-color: #0A4C51;
+  border-color: none;
 }
 
 .btn-cat {
   color: #1E767A;
   background-color: #D1E7DF;
   border-color: none;
+}
+
+body, html {
+   border: 0;
+   padding: 0;
+   margin: 0;
+}
+#container {
+   border: 0;
+   padding: 0;
+   margin: 0;
 }

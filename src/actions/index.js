@@ -22,3 +22,22 @@ export const getRegulation = (regulation) => {
       })
   }
 }
+
+// export function addVote(vote, regulation){
+//   return (dispatch) => {
+//     axios
+//       .post(`http://localhost:4000/regulations/${regulation.id}`, vote, {
+//       //   headers:
+//       //   ...
+//       // })
+//       .then(({data}) => {
+//         dispatch({
+//           type: "SUBMIT_VOTE",
+//           vote: data
+//         })
+//       })
+//       .catch((errors)=>{
+//         console.log(errors)
+//       })
+//   }
+// }
