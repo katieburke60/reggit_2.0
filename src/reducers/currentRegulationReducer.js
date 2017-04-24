@@ -1,4 +1,4 @@
-export default (state={}, action) => {
+export default (state={comments: [], regulation_body: {}}, action) => {
 
   switch (action.type) {
     case "SET_CURRENT_REGULATION":

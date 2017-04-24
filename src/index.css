@@ -8,12 +8,14 @@
   color: #FDFBF2;
   background-color: #0A4C51;
   border-color: none;
+  font-size: 20px;
 }
 
 .btn-cat {
   color: #1E767A;
   background-color: #D1E7DF;
   border-color: none;
+  font-size: 20px;
 }
 
 body, html {

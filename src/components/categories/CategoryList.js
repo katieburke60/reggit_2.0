@@ -22,7 +22,7 @@ class CategoryList extends Component {
     })
     return (
       <div id="sidebar" className="sidebar" >
-        <div className="col-md-2">
+        <div className="col-md-1">
           <button
             className="btn-main btn-outline-default btn-space"
             onClick={this.handleAllClicked}>

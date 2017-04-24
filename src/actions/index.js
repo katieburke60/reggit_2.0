@@ -1,22 +1,30 @@
 import axios from 'axios'
 
-export const getRegulationList = () => {
-
+export const getRegulations = () => {
   return (dispatch) => {
     axios
       .get(`http://localhost:4000/regulations`)
       .then(({data}) => {
-        debugger
-        dispatch({type: "RECEIVE_REGULATIONS", regulation: data})
+        dispatch({type: "RECEIVE_REGULATIONS", regulations: data})
 
       })
   }
 }
 
-export const getRegulation = (regulation) => {
+export const getCategories = () => {
   return (dispatch) => {
     axios
-    .get(`http://localhost:4000/regulations/${regulation.id}`)
+    .get('http://localhost:4000/categories')
+    .then(({data}) => {
+      dispatch({type: 'RECEIVE_CATEGORIES', categories: data})
+   })
+  }
+}
+
+export const getRegulation = (regulationId) => {
+  return (dispatch) => {
+    axios
+    .get(`http://localhost:4000/regulations/${regulationId}`)
       .then(({data}) => {
         dispatch({type: "SET_CURRENT_REGULATION", regulation: data})
       })
