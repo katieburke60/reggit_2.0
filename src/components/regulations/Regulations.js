@@ -9,6 +9,7 @@ class Regulations extends Component {
         return <RegulationListItem
           key={regulation.id}
           regulation={regulation}
+
         />
       })
 

@@ -22,3 +22,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.regulation-item {
+  background-color: white;
+  margin: 20px 0;
+  font-size: 1.5em;
+  text-decoration: none;
+}
