@@ -14,7 +14,6 @@ import 'bootstrap/dist/css/bootstrap-theme.css'
 import SelectedRegulation from './components/regulations/SelectedRegulation'
 import createHistory from 'history/createBrowserHistory'
 import {
-  
   ConnectedRouter as Router,
   routerMiddleware
 } from 'react-router-redux'

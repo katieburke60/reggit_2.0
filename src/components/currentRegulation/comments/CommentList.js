@@ -2,10 +2,9 @@ import React from 'react';
 import Comment from './Comment'
 
 export default (props) => {
-  debugger
   const numComments = props.comments.length
   return (
-    <div className="container">
+    <div>
         <h2>What people are saying </h2>
       <div className="comments-list">
           {props.comments.map((comment) => <Comment
