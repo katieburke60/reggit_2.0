@@ -12,9 +12,12 @@ import { BrowserRouter } from 'react-router'
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <h1 className="titlename"> Reggit: Get heard </h1>
-        <div>{<CategoryList />}</div>
+      <div className="container wrap full-width">
+        <div className="topper">
+          <h1 className="titlename"> Reggit         </h1>
+          <div className="subtitle">Get heard</div>
+        </div>
+        <CategoryList />
         <Regulations />
       </div>
     );

@@ -1,4 +1,3 @@
-
 /* eslint-disable */
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
@@ -23,13 +22,14 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
-      <div>
-        <div className="col-md-10">
-          <CommentList comments={this.props.regulation.comments}/>
+      <div className='row'>
+        <div className="col-md-7">
           <RegulationBlob body={this.props.regulation.regulation_body}/>
         </div>
-        <div className="col-xs-2">
+        <div>
+          <CommentList comments={this.props.regulation.comments}/>
           <UpAndDownvote regulation={this.props.regulation}/>
+          {/* <VoteList votes={this.props.regulation.votes}/> */}
           <SubmitComment value={this.props.regulation.comments}/>
         </div>
       </div>
@@ -38,7 +38,8 @@ class SelectedRegulation extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    regulation: state.currentRegulation
+    regulation: state.currentRegulation,
+    regulations: state.regulations.all
   }
 }
 
