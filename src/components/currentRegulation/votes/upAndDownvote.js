@@ -1,9 +1,6 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Vote from './Vote'
-import RegulationBlob from '../body/RegulationBlob'
-import SelectedRegulation from '../../regulations/SelectedRegulation'
 import { addVote } from '../../../actions'
 
 class UpAndDownVote extends Component {

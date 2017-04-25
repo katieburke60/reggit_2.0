@@ -21,20 +21,18 @@ class CategoryList extends Component {
       />
     })
     return (
-      <div id="sidebar" className="sidebar" >
-        <div className="col-md-1">
-          <button
-            className="btn-main btn-outline-default btn-space"
-            onClick={this.handleAllClicked}>
-            All Regs
-          </button>
-          <p>{categories}</p>
-        </div>
-      </div>
-    );
+      <div id="exTab2" className="container">
+      <ul className="nav nav-tabs">
+        <li className="active"><a href="#1a" data-toggle="tab" onClick={this.handleAllClicked}>All Regs</a></li>
+            {categories}
+        <li><a href="#2" data-toggle="tab">Most Votes</a></li>
+        <li><a href="#3" data-toggle="tab">Most Comments</a></li>
+      </ul>
+
+    </div>
+    )
   }
 }
-
 const mapStateToProps = (state) => ({
     categories: state.categories
 })
