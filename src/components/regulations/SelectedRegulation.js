@@ -23,15 +23,20 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
-      <div class= "page2">
-        <div className="regulation-body">
+      <div class="container-fluid">
+        <div className="col-md-8">
           <RegulationBlob body={this.props.regulation.regulation_body}/>
         </div>
-
         <div className="col-xs-2">
           <UpAndDownvote regulation={this.props.regulation}/>
           <SubmitComment value={this.props.regulation.comments}/>
           <CommentList comments={this.props.regulation.comments}/>
+            <div class="panel panel-default">
+              <div class="panel-heading">Panel heading without title</div>
+              <div class="panel-body">
+                Panel content
+              </div>
+            </div>
         </div>
       </div>
     )}

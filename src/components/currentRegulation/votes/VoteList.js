@@ -1,10 +1,10 @@
 import React from 'react'
 import Vote from './Vote'
-import UpAndDownVote from './upAndDownvote'
+// import UpAndDownVote from './upAndDownvote'
 
 
 export default class VoteList extends React.Component {
-
+debugger
   render() {
     let votesFor = this.props.votes.filter((vote) => vote.vote === "up").length
 

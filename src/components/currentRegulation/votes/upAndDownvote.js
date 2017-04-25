@@ -25,11 +25,13 @@ class UpAndDownVote extends Component {
   render() {
     return (
     <div>
+
       <h1> Vote on this Regulation</h1>
       <label>I agree with this proposal!</label>
       <div style={{color: 'green'}} className="votes-container">
             <button onClick={this.handleUpVoteClicked}>Agree</button>
       </div>
+
       <label> I disagree with this proposal!</label>
       <div style={{color: 'red'}} className="votes-container">
           <button onClick={this.handleDownVoteClicked}>Disagree</button>
@@ -37,6 +39,7 @@ class UpAndDownVote extends Component {
     </div>
     );
   }
+}
 
 
 const mapDispatchToProps = (dispatch) => {
