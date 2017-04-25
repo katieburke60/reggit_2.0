@@ -21,7 +21,7 @@ class CategoryList extends Component {
       />
     })
     return (
-      <div id="exTab2" className="container">
+      <div id="exTab2" className="cats">
       <ul className="nav nav-tabs">
         <li className="active"><a href="#1a" data-toggle="tab" onClick={this.handleAllClicked}>All Regs</a></li>
             {categories}

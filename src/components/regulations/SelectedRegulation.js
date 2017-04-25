@@ -22,27 +22,33 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
-      <div>
-        <div className="col-md-7">
-          <div className="regulation-title">
-            {this.props.regulation.title}
-          </div>
-          <div className="regulation-summary">
-            {this.props.regulation.summary}
-          </div>
-          <div className="reg-other">Topic: {this.props.regulation.category_name}</div>
-          <div className="reg-other">Status: {this.props.regulation.reg_status}</div>
-          <br/>
-          <p className='reg-detail-flag'>Get Smart: Here's The Full Reg Text</p>
-          <div className="reg-text">
-            <RegulationBlob body={this.props.regulation.regulation_body}/>
-          </div>
+      <div className="wrap full-width">
+        <div className="topper">
+          <h1 className="titlename"> Reggit         </h1>
+          <div className="subtitle">Get heard</div>
         </div>
-        <div className="col-md-4">
-          <CommentList comments={this.props.regulation.comments}/>
-          <UpAndDownvote regulation={this.props.regulation}/>
-          {/* <VoteList regulation={this.props.regulation}/> */}
-          <SubmitComment value={this.props.regulation.comments}/>
+        <div>
+          <div className="col-md-8">
+            <div className="regulation-title">
+              {this.props.regulation.title}
+            </div>
+            <div className="regulation-summary">
+              {this.props.regulation.summary}
+            </div>
+            <div className="reg-other">Topic: {this.props.regulation.category_name}</div>
+            <div className="reg-other">Status: {this.props.regulation.reg_status}</div>
+            <br/>
+            <p className='reg-detail-flag'>Get Smart: Here's The Full Reg Text</p>
+            <div className="reg-text">
+              <RegulationBlob body={this.props.regulation.regulation_body}/>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <CommentList comments={this.props.regulation.comments}/>
+            <UpAndDownvote regulation={this.props.regulation}/>
+            {/* <VoteList regulation={this.props.regulation}/> */}
+            <SubmitComment value={this.props.regulation.comments}/>
+          </div>
         </div>
       </div>
     )}
