@@ -31,33 +31,16 @@ export const getRegulation = (regulationId) => {
 }
 export const addVote = (regulation, vote) => {
   return(dispatch) => {
-    axios({
-      method: 'POST',
-      url: `http://localhost:4000/votes`,
-      dataType: "json",
-      data: {
-        vote: vote,
-        regulation_id: regulation.id
-      },
-      })
+    axios
+      .post('http://localhost:4000/votes', { vote: vote, regulation_id: regulation.id })
     }
 }
-export const createComment = (regulation, comment) => {
+export const addComment = (regulation, comment) => {
   return(dispatch) => {
-    axios({
-      method: 'POST',
-      url: 'http://localhost:4000/comments',
-      dataType: "json",
-      data: {
-        comment:comment,
-        regulation_id: regulation.id
-      }
-    })
-
-    // axios
-    // .get(`http://localhost:4000/regulations/comments`)
-    //   .then(({data}) => {
-    //     dispatch({type: "SUBMIT_COMMENT_FOR_REGULATION", regulation: data})
-    //   })
+    axios
+      .post('http://localhost:4000/comments', { comment: comment, regulation_id: regulation.id })
+      .then(({data}) => {
+        dispatch({type: "SET_CURRENT_REGULATION", regulation: data.regulation})
+      })
   }
 }

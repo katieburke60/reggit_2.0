@@ -1,9 +1,7 @@
-export default (state={all:[]}, action) => {
+export default (state=[], action) => {
   switch(action.type) {
     case 'SUBMIT_VOTE':
-      return ({
-        all: action.votes
-      })
+      return action.votes
     default:
       return state
     }

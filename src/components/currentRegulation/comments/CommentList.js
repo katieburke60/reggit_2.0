@@ -2,10 +2,11 @@ import React from 'react';
 import Comment from './Comment'
 
 export default (props) => {
+  debugger
   const numComments = props.comments.length
   return (
     <div className="container">
-        <h2>Comments </h2>
+        <h2>What people are saying </h2>
       <div className="comments-list">
           {props.comments.map((comment) => <Comment
             key={comment.id}
