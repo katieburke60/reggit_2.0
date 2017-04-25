@@ -8,7 +8,7 @@ import RegulationBlob from '../currentRegulation/body/RegulationBlob'
 import { getRegulation } from '../../actions'
 import UpAndDownvote from '../currentRegulation/votes/upAndDownvote'
 import SubmitComment from '../currentRegulation/submitComments/submitComment'
-
+import '../../App.css'
 
 class SelectedRegulation extends Component {
   // componentWillReceiveProps(nextProps) {
@@ -23,14 +23,15 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
-      <div>
-        <div className="col-md-10">
-          <CommentList comments={this.props.regulation.comments}/>
+      <div class= "Page2">
+        <div className="regulation-body">
           <RegulationBlob body={this.props.regulation.regulation_body}/>
         </div>
+
         <div className="col-xs-2">
           <UpAndDownvote regulation={this.props.regulation}/>
           <SubmitComment value={this.props.regulation.comments}/>
+          <CommentList comments={this.props.regulation.comments}/>
         </div>
       </div>
     )}

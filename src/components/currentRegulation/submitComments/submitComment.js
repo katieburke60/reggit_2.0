@@ -31,7 +31,7 @@ class SubmitComment extends Component {
         <form onSubmit={this.handleSubmit}>
           <div className="addcomment-container">
               <h3>Speak Up!</h3>
-              <textarea rows="10" cols="50" placeholder="Say something..." value={this.state.value} onChange={this.handleChange} ></textarea>
+              <textarea rows="5" cols="50" placeholder="Say something..." value={this.state.value} onChange={this.handleChange} ></textarea>
               <input type="submit" value="Submit your Voice!" />
           </div>
         </form>

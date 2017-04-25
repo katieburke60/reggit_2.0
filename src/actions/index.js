@@ -44,16 +44,10 @@ export const addVote = (regulation, vote) => {
     }
 }
 export const createComment = (regulation, comment) => {
+    debugger
   return(dispatch) => {
-    axios({
-      method: 'POST',
-      url: 'http://localhost:4000/comments',
-      dataType: "json",
-      data: {
-        comment:comment,
-        regulation_id: regulation.id
-      }
-    })
+    axios.post('http://localhost:4000/comments', { comment:comment, regulation_id: regulation.id })
+
 
     // axios
     // .get(`http://localhost:4000/regulations/comments`)

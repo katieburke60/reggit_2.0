@@ -1,14 +1,15 @@
-import React from 'react';
+import React from 'react'
 import Vote from './Vote'
-// import UpAndDownVote from '/upAndDownvote'
-// import VoteCount from './VoteCount'
+import UpAndDownVote from './upAndDownvote'
+
 
 export default class VoteList extends React.Component {
-
+  debugger
 
   render() {
 
     let votesFor = this.props.votes.filter((vote) => vote.vote === "up").length
+
     let votesAgainst = this.props.votes.length - votesFor
     return (
       <div>
