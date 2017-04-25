@@ -1,14 +1,15 @@
+
 import React from 'react'
-import Vote from './Vote'
-// import UpAndDownVote from './upAndDownvote'
+import { SelectedRegulation } from '../../regulations/SelectedRegulation'
+import { connect } from 'react-redux'
 
+ class VoteList extends React.Component {
 
-export default class VoteList extends React.Component {
-debugger
   render() {
-    let votesFor = this.props.votes.filter((vote) => vote.vote === "up").length
+debugger
+    let votesFor = this.props.regulation.votes.filter((vote) => vote.vote === "up").length
+    let votesAgainst = this.props.regulation.votes.length - votesFor
 
-    let votesAgainst = this.props.votes.length - votesFor
     return (
       <div>
         <div>Vote For: {votesFor}</div>
@@ -17,3 +18,10 @@ debugger
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    regulation: state.currentRegulation.votes
+  }
+}
+
+export default connect(mapStateToProps)(VoteList)

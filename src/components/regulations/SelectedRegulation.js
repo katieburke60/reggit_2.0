@@ -28,15 +28,11 @@ class SelectedRegulation extends Component {
           <RegulationBlob body={this.props.regulation.regulation_body}/>
         </div>
         <div className="col-xs-2">
-          <UpAndDownvote regulation={this.props.regulation}/>
+          <UpAndDownvote votes={this.props.regulation.votes} regulation={this.props.regulation.id}/>
           <SubmitComment value={this.props.regulation.comments}/>
           <CommentList comments={this.props.regulation.comments}/>
-            <div class="panel panel-default">
-              <div class="panel-heading">Panel heading without title</div>
-              <div class="panel-body">
-                Panel content
-              </div>
-            </div>
+          <VoteList />
+
         </div>
       </div>
     )}

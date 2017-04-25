@@ -2,51 +2,49 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addVote } from '../../../actions'
+import { SelectedRegulation } from '../../regulations/SelectedRegulation'
 
 class UpAndDownVote extends Component {
-
   constructor(props) {
     super(props);
-
     this.handleDownVoteClicked = this.handleDownVoteClicked.bind(this);
-    this.handleUpVoteClicked = this.handleDownVoteClicked.bind(this);
+    this.handleUpVoteClicked = this.handleUpVoteClicked.bind(this);
+  }
 
-}
   handleDownVoteClicked (event) {
     event.preventDefault();
-    this.props.submitVote(this.props.regulation, "down")
-  }
-  handleUpVoteClicked (event) {
-    event.preventDefault();
-    this.props.submitVote(this.props.regulation, "up")
+    this.props.submitVote(this.props.regulationId, "down")
   }
 
+  handleUpVoteClicked (event) {
+    event.preventDefault();
+    this.props.submitVote(this.props.regulationId, "up")
+
+  }
 
   render() {
     return (
     <div>
+      <h3>What do you think?</h3>
+      <div className="votes-container">
+          <button className="btn-default" onClick={this.handleUpVoteClicked}>I'm for it</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button className="btn-default" onClick={this.handleDownVoteClicked}>I'm against it</button>
 
-      <h1> Vote on this Regulation</h1>
-      <label>I agree with this proposal!</label>
-      <div style={{color: 'green'}} className="votes-container">
-            <button onClick={this.handleUpVoteClicked}>Agree</button>
-      </div>
-
-      <label> I disagree with this proposal!</label>
-      <div style={{color: 'red'}} className="votes-container">
-          <button onClick={this.handleDownVoteClicked}>Disagree</button>
       </div>
     </div>
     );
   }
+
 }
-
-
 const mapDispatchToProps = (dispatch) => {
+
   return {
-    submitVote: function(regulation, vote){
-      dispatch(addVote(regulation, vote))
+    submitVote: function(regulationId, vote){
+      dispatch(addVote(regulationId, vote))
     }
+
   }
+
 }
 export default connect(null, mapDispatchToProps)(UpAndDownVote)

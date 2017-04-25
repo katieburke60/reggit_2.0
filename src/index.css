@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 
 .comments-list .media {
     border-bottom: 2px dotted #cccccc;
@@ -7,7 +9,40 @@
 .regulation {
   margin-left: 20px
 }
+.regulation-title {
+  color: #191970;
+  font-size: 30px;
+  font-family: 'Muli';
+  font-weight: Bold;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+.regulation-summary {
+  color: #696F75;
+  font-size: 16px;
+  font-family: 'Muli';
+  padding-bottom: 5px;
+}
 
+.reg-other {
+  color: #f05959;
+  font-size: 18px;
+  font-family: 'Muli';
+  padding-bottom: 0px;
+  font-weight: Bold;
+}
+.reg-detail-flag {
+  color: #5e5a5a;
+  font-size: 41px;
+  font-family: 'Muli';
+  font-weight: Bold;
+  padding-bottom: 0px;
+  padding-top: 20px;
+}
+.reg-text {
+  color: #696F75;
+  font-family: 'Muli';
+}
 .categories {
   margin-left: 15px
 }
@@ -20,7 +55,10 @@
 body {
    border: 0;
    padding: 0;
-   margin: 0;
+   margin:4px 0 0 0;
+	 position:absolute;
+	 width:100&#37;;
+	 z-index:10;
 }
 
 header, .full-width {
@@ -46,7 +84,7 @@ header, .full-width {
 }
 
 .tab-content {
-  font-size:16px;
+  font-size:15px;
 }
 
 .topper {
@@ -57,7 +95,7 @@ header, .full-width {
 }
 
 .nav-tabs {
-  font-size:15px;
+  font-size:14px;
   padding-top: 30px;
 }
 
@@ -73,7 +111,7 @@ header, .full-width {
 .subtitle {
   float: center;
   display: inline;
-  color: #ff6666;
+  color: #f05959;
   font-size: 30px;
   font-family: "Muli";
   font-weight: Light;
