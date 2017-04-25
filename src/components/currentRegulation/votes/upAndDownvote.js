@@ -25,14 +25,11 @@ class UpAndDownVote extends Component {
   render() {
     return (
     <div>
-      <h1> Vote on this Regulation</h1>
-      <label>I agree with this proposal!</label>
-      <div style={{color: 'green'}} className="votes-container">
-          <button onClick={this.handleDownVoteClicked}>Click to Agree</button>
-      </div>
-      <label> I disagree with this proposal!</label>
-      <div style={{color: 'red'}} className="votes-container">
-          <button onClick={this.handleDownVoteClicked}>Click to Disagree</button>
+      <h3>What do you think?</h3>
+      <div className="votes-container">
+          <button className="btn-default" onClick={this.handleDownVoteClicked}>I'm for it</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button className="btn-default" onClick={this.handleDownVoteClicked}>I'm against it</button>
       </div>
 
     </div>
