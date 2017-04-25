@@ -20,7 +20,10 @@
 body {
    border: 0;
    padding: 0;
-   margin: 0;
+   margin:4px 0 0 0;
+	 position:absolute;
+	 width:100&#37;;
+	 z-index:10;
 }
 
 header, .full-width {

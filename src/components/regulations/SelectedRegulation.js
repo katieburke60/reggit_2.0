@@ -22,11 +22,11 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
-      <div className='row'>
+      <div>
         <div className="col-md-7">
           <RegulationBlob body={this.props.regulation.regulation_body}/>
         </div>
-        <div>
+        <div className="col-md-4">
           <CommentList comments={this.props.regulation.comments}/>
           <UpAndDownvote regulation={this.props.regulation}/>
           {/* <VoteList votes={this.props.regulation.votes}/> */}
