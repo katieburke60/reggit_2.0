@@ -22,7 +22,6 @@ export const getCategories = () => {
 
 export const getRegulation = (regulationId) => {
   return (dispatch) => {
-
     axios
     .get(`http://localhost:4000/regulations/${regulationId}`)
       .then(({data}) => {

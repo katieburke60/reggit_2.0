@@ -14,12 +14,15 @@ class CategoryListItem extends Component {
   }
 
   render () {
-  return <button
-    key={this.props.id}
-    className="btn-cat btn-outline-default btn-space"
-    onClick={this.handleCatClicked}>
-    {this.props.name.charAt(0).toUpperCase() + this.props.name.slice(1)}</button>
-  }
+    return (
+    <li>
+      <a href="#"
+        onClick={this.handleCatClicked}
+        key={this.props.id}>
+        {this.props.name.charAt(0).toUpperCase() + this.props.name.slice(1)}
+      </a>
+    </li>
+  )}
 }
 
 export default connect()(CategoryListItem);

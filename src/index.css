@@ -18,6 +18,23 @@
   font-size: 20px;
 }
 
+.comments-list .media {
+    border-bottom: 2px dotted #cccccc;
+}
+
+.regulation {
+  margin-left: 20px
+}
+
+.categories {
+  margin-left: 15px
+}
+
+.user_name {
+    font-size:14px;
+    font-weight: bold;
+}
+
 body, html {
    border: 0;
    padding: 0;
@@ -27,4 +44,10 @@ body, html {
    border: 0;
    padding: 0;
    margin: 0;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
 }

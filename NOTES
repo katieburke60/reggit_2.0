@@ -1,3 +1,18 @@
+TO DO
+1. Add vote counts
+2. Add comments count
+2.5 Fix comment and vote rendering
+3. Add login
+
+4. Add more filters for highest comments and votes
+
+
+
+
+const regulationMore = {this.props.regs.all.filter((reg) => {
+  reg.id == this.props.match.params.regulationId)}
+}
+
 <<<<<<< Updated upstream
 *Votes reducer updates when it receives set current (votes, etc.)
 

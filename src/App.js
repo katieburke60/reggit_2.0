@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1 className="titlename"> Reggit: Get heard </h1>
-        <div>{<CategoryList />}</div>
+        <CategoryList />
         <Regulations />
       </div>
     );
