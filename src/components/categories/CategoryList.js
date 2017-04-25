@@ -25,8 +25,6 @@ class CategoryList extends Component {
       <ul className="nav nav-tabs">
         <li className="active"><a href="#1a" data-toggle="tab" onClick={this.handleAllClicked}>All Regs</a></li>
             {categories}
-        <li><a href="#2" data-toggle="tab">Most Votes</a></li>
-        <li><a href="#3" data-toggle="tab">Most Comments</a></li>
       </ul>
 
     </div>

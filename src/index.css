@@ -1,22 +1,4 @@
-.btn-space {
-    margin-right: 0px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-.btn-main {
-  color: #FDFBF2;
-  background-color: #0A4C51;
-  border-color: none;
-  font-size: 20px;
-}
-
-.btn-cat {
-  color: #1E767A;
-  background-color: #D1E7DF;
-  border-color: none;
-  font-size: 20px;
-}
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 .comments-list .media {
     border-bottom: 2px dotted #cccccc;
@@ -35,11 +17,22 @@
     font-weight: bold;
 }
 
-body, html {
+body {
    border: 0;
    padding: 0;
    margin: 0;
 }
+
+header, .full-width {
+  width: 100%;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 120em;
+  margin: 0 auto;
+}
+
 #container {
    border: 0;
    padding: 0;
@@ -50,4 +43,38 @@ body, html {
   color : white;
   background-color: #428bca;
   padding : 5px 15px;
+}
+
+.tab-content {
+  font-size:16px;
+}
+
+.topper {
+  background-color: #EEEEEE;
+  width:100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.nav-tabs {
+  font-size:15px;
+  padding-top: 30px;
+}
+
+.titlename {
+  display: inline;
+  border-bottom:0px solid #000;
+  color: #191970;
+  font-size: 60px;
+  font-family: "Muli", sans-serif;
+  font-weight: Hairline;
+}
+
+.subtitle {
+  float: center;
+  display: inline;
+  color: #ff6666;
+  font-size: 30px;
+  font-family: "Muli";
+  font-weight: Light;
 }

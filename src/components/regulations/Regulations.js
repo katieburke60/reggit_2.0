@@ -19,6 +19,7 @@ class Regulations extends Component {
       })
     return (
       <div className="tab-content ">
+        <br></br>
           {regulations}
       </div>
     );
