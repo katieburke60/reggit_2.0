@@ -3,8 +3,6 @@ import { routerReducer } from 'react-router-redux'
 
 import RegulationsReducer from './regulationsReducer'
 import CurrentRegulationReducer from './currentRegulationReducer'
-import VotesReducer from './votesReducer'
-import CommentSubmitReducer from './commentSubmitReducer'
 import CategoriesReducer from './categoriesReducer'
 
 
@@ -12,7 +10,5 @@ export default combineReducers({
   regulations: RegulationsReducer,
   currentRegulation: CurrentRegulationReducer,
   categories: CategoriesReducer,
-  comments:CommentSubmitReducer,
-  votes: VotesReducer,
   router: routerReducer,
 })
