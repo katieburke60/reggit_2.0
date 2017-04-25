@@ -9,6 +9,7 @@ class UpAndDownVote extends Component {
     super(props);
 
     this.handleDownVoteClicked = this.handleDownVoteClicked.bind(this);
+    this.handleUpVoteClicked = this.handleUpVoteClicked.bind(this);
   }
 
   handleDownVoteClicked (event) {
@@ -16,11 +17,25 @@ class UpAndDownVote extends Component {
     this.props.submitVote(this.props.regulation, "down")
   }
 
+  handleUpVoteClicked (event) {
+    event.preventDefault();
+    this.props.submitVote(this.props.regulation, "up")
+  }
+
   render() {
     return (
-      <div style={{color: 'red'}} className="votes-container">
-          <button onClick={this.handleDownVoteClicked}>Disagree</button>
+    <div>
+      <h1> Vote on this Regulation</h1>
+      <label>I agree with this proposal!</label>
+      <div style={{color: 'green'}} className="votes-container">
+          <button onClick={this.handleDownVoteClicked}>Click to Agree</button>
       </div>
+      <label> I disagree with this proposal!</label>
+      <div style={{color: 'red'}} className="votes-container">
+          <button onClick={this.handleDownVoteClicked}>Click to Disagree</button>
+      </div>
+
+    </div>
     );
   }
 }
