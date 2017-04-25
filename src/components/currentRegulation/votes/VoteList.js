@@ -1,4 +1,5 @@
 import React from 'react';
+import Vote from './Vote'
 
 export default class VoteList extends React.Component {
   render() {

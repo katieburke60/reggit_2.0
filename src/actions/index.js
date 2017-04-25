@@ -42,3 +42,22 @@ export const addVote = (regulation, vote) => {
       })
     }
 }
+export const createComment = (regulation, comment) => {
+  return(dispatch) => {
+    axios({
+      method: 'POST',
+      url: 'http://localhost:4000/comments',
+      dataType: "json",
+      data: {
+        comment:comment,
+        regulation_id: regulation.id
+      }
+    })
+
+    // axios
+    // .get(`http://localhost:4000/regulations/comments`)
+    //   .then(({data}) => {
+    //     dispatch({type: "SUBMIT_COMMENT_FOR_REGULATION", regulation: data})
+    //   })
+  }
+}

@@ -6,6 +6,8 @@ import SelectedRegulation from './components/regulations/SelectedRegulation'
 import './App.css'
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
+import { BrowserRouter } from 'react-router'
+
 
 class App extends Component {
   render() {
