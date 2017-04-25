@@ -1,14 +1,10 @@
 import React from 'react';
 import Vote from './Vote'
+// import UpAndDownVote from '/upAndDownvote'
 // import VoteCount from './VoteCount'
 
 export default class VoteList extends React.Component {
 
-//   renderVotes() {
-//     return this.props.votes.map((vote) => {
-//          return <Vote key={vote.id} vote={vote.vote}/>
-//     })
-//   }
 
   render() {
 
