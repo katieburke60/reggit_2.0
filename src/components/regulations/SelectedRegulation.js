@@ -23,7 +23,7 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
-      <div class= "Page2">
+      <div class= "page2">
         <div className="regulation-body">
           <RegulationBlob body={this.props.regulation.regulation_body}/>
         </div>

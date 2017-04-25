@@ -18,11 +18,9 @@ class Regulations extends Component {
         />
       })
     return (
-      <div className="container">
-        <div className="col-md-9">
-          <h2> What's Happening? </h2>
+      <div className="tab-content ">
+        <br></br>
           {regulations}
-        </div>
       </div>
     );
   }

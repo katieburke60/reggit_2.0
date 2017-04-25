@@ -10,18 +10,14 @@ class RegulationListItem extends Component {
   render() {
     return (
       <div>
-        <li className="regulation-item">
-          <Link to={`/regulations/${this.props.regulation.id}`}>{this.props.regulation.title}</Link>
-          {/* <a onClick={(e) => {
-          e.preventDefault()
-          props.fetchRegulation(props.regulation)
-          }} href="#">{props.regulation.title}</a> */}
-        </li>
+        <div className="tab-pane">
+          <p><Link to={`/regulations/${this.props.regulation.id}`}>
+          {this.props.regulation.title}</Link></p>
+        </div>
       </div>
     )
   }
 }
-
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchRegulation: function(regulation){
