@@ -6,18 +6,19 @@ class SubmitComment extends Component {
   constructor(props) {
     super(props)
     this.state={
-      comment: ''
+      description: ''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit= this.handleSubmit.bind(this)
     }
     handleChange(e) {
         this.setState({
-           comment: e.target.value});
+           description: e.target.value});
     }
     handleSubmit(e) {
      e.preventDefault();
-     this.props.submitComment(this.props.regulation, this.props.comment);
+     debugger
+     this.props.addComment(this.props.regulation_id, this.state.description);
    }
     render() {
       return (
@@ -32,12 +33,12 @@ class SubmitComment extends Component {
     }
   }
   const mapStateToProps = (state) => {
-    comment: state.comment
+    description: state.description
   }
   const mapDispatchToProps = (dispatch) => {
     return {
-      submitComment: function(regulation, comment){
-        dispatch(addComment(regulation, comment))
+      addComment: function(regulation_id, description){
+        dispatch(addComment(regulation_id, description))
       }
     }
   }
