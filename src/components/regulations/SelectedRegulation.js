@@ -29,9 +29,9 @@ class SelectedRegulation extends Component {
         </div>
         <div className="col-xs-2">
           <UpAndDownvote votes={this.props.regulation.votes} regulation={this.props.regulation.id}/>
-          <SubmitComment value={this.props.regulation.comments}/>
-          <CommentList comments={this.props.regulation.comments}/>
-          <VoteList value={this.props.regulation.votesFor} />
+            <VoteList value={this.props.regulation.votesFor}/>
+           <SubmitComment value={this.props.regulation.comments}/>
+           <CommentList comments={this.props.regulation.comments}/>
 
         </div>
       </div>

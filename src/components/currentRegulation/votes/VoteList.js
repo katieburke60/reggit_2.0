@@ -19,8 +19,8 @@ import { SelectedRegulation } from '../../regulations/SelectedRegulation'
     )
   }
 }
-const mapStateToProps = (state) => {
 
+const mapStateToProps = (state) => {
   return {
     regulation: state.currentRegulation
   }
