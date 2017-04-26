@@ -32,17 +32,19 @@ export const getRegulation = (regulationId) => {
 export const addVote = (regulationId, vote) => {
 
   return(dispatch) => {
-    debugger
+
     axios({
       method: 'POST',
       url:'http://localhost:4000/votes',
       data:{ vote: vote, regulation_id: regulationId },
     })
+
     .then(({data}) => {
       dispatch({type:'SUBMIT_VOTE'},
       {vote: vote, regulation_id: regulationId})
     })
     }
+
 }
 
 export const addComment = (regulation, comment) => {

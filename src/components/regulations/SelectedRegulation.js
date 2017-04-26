@@ -1,5 +1,4 @@
 
-/* eslint-disable */
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import CommentList from '../currentRegulation/comments/CommentList'
@@ -23,6 +22,7 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
+
       <div className="wrap full-width">
         <div className="topper">
           <h1 className="titlename"> Reggit         </h1>
@@ -46,7 +46,7 @@ class SelectedRegulation extends Component {
           </div>
           <div className="col-md-4">
             <CommentList comments={this.props.regulation.comments}/>
-            <UpAndDownvote regulation={this.props.regulation}/>
+            <UpAndDownvote regulation={this.props.regulation} regulationId={this.props.regulation.id}/>
             <VoteList value={this.props.regulation.votesFor}/>
             <SubmitComment value={this.props.regulation.comments}/>
           </div>

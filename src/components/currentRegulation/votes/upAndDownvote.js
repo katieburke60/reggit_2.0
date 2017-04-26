@@ -37,8 +37,8 @@ class UpAndDownVote extends Component {
   }
 
 }
-const mapDispatchToProps = (dispatch) => {
 
+const mapDispatchToProps = (dispatch) => {
   return {
     submitVote: function(regulationId, vote){
       dispatch(addVote(regulationId, vote))
