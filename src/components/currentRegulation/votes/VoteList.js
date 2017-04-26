@@ -1,12 +1,13 @@
 
-import React from 'react'
-import { SelectedRegulation } from '../../regulations/SelectedRegulation'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { addVote } from '../../../actions'
+import { SelectedRegulation } from '../../regulations/SelectedRegulation'
 
  class VoteList extends React.Component {
 
   render() {
-debugger
+
     let votesFor = this.props.regulation.votes.filter((vote) => vote.vote === "up").length
     let votesAgainst = this.props.regulation.votes.length - votesFor
 
@@ -19,8 +20,9 @@ debugger
   }
 }
 const mapStateToProps = (state) => {
+
   return {
-    regulation: state.currentRegulation.votes
+    regulation: state.currentRegulation
   }
 }
 
