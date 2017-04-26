@@ -2,10 +2,23 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo');
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 
-.comments-list .media {
+.comments-list{
     border-bottom: 2px dotted #cccccc;
 }
 
+.header1 {
+  font-size: 35px;
+  font-family: 'Muli';
+  padding-bottom: 10px;
+}
+
+.btn-default {
+  font-size: 16px;
+}
+.vote-wrapper{
+  float:'left' !important;
+  width:"50%" !important;
+}]
 .regulation {
   margin-left: 20px
 }
@@ -117,4 +130,24 @@ header, .full-width {
   font-size: 30px;
   font-family: "Muli";
   font-weight: Light;
+}
+
+.vote-count {
+  text-align:center !important;
+  display: inline;
+  font-size: 50px;
+  color: #f05959;
+  font-family: "Muli";
+  padding:50px;
+}
+
+.vote-text {
+  padding-left: 35px;
+  padding-bottom: 10px;
+  text-align:center;
+  display: inline;
+  font-size: 14px;
+  color: #black;
+  font-family: "Muli";
+  font-weight: bold;
 }

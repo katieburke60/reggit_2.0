@@ -12,6 +12,7 @@ import UpAndDownvote from './components/currentRegulation/votes/upAndDownvote'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import SelectedRegulation from './components/regulations/SelectedRegulation'
+import SubmitComment from './components/currentRegulation/comments/submitComment'
 import createHistory from 'history/createBrowserHistory'
 import {
   ConnectedRouter as Router,

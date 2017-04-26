@@ -5,7 +5,7 @@ export default (props) => {
   const numComments = props.comments.length
   return (
     <div>
-        <h2>What people are saying </h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;
       <div className="comments-list">
           {props.comments.map((comment) => <Comment
             key={comment.id}
@@ -13,6 +13,7 @@ export default (props) => {
           />)
           }
       </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
   )
 }
