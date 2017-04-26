@@ -47,7 +47,7 @@ class SelectedRegulation extends Component {
             <VoteList regulation={this.props.regulation}/>
             <CommentList comments={this.props.regulation.comments}/>
             <UpAndDownvote regulation={this.props.regulation}/>
-            <SubmitComment value={this.props.regulation.comments} regulation={this.props.regulation}/>
+            <SubmitComment regulation_id={this.props.regulation.id}/>
           </div>
         </div>
       </div>
