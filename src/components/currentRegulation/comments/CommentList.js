@@ -5,7 +5,7 @@ export default (props) => {
 
   const numComments = props.comments.length
   return (
-    <div className="container">
+    <div>
         <h2>What people are saying </h2>
       <div className="comments-list">
           {props.comments.map((comment) => <Comment

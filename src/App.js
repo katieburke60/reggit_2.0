@@ -12,7 +12,7 @@ import { BrowserRouter } from 'react-router'
 class App extends Component {
   render() {
     return (
-      <div className="container wrap full-width">
+      <div className="wrap full-width">
         <div className="topper">
           <h1 className="titlename"> Reggit         </h1>
           <div className="subtitle">Get heard</div>
