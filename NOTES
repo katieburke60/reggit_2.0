@@ -10,7 +10,16 @@ TO DO
 4. Add more filters for highest comments and votes
 
 
-
+// const mapStateToProps = (state) => {
+//   regulation = props.currentRegulation
+// }
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     submitComment: function(regulation, comment){
+//       dispatch(addComment(regulation, comment))
+//     }
+//   }
+// }
 
 const regulationMore = {this.props.regs.all.filter((reg) => {
   reg.id == this.props.match.params.regulationId)}

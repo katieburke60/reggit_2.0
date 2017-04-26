@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { store } from '../index'
 
 export const getRegulations = () => {
   return (dispatch) => {
@@ -19,7 +20,6 @@ export const getCategories = () => {
    })
   }
 }
-
 export const getRegulation = (regulationId) => {
   return (dispatch) => {
     axios
@@ -47,13 +47,13 @@ export const addVote = (regulationId, vote) => {
 
 }
 
-export const addComment = (regulation, comment) => {
-  return(dispatch) => {
-    axios
-      .post('http://localhost:4000/comments', { comment: comment, regulation_id: regulation.id })
-      .then(({data}) => {
-        dispatch({type: "SET_CURRENT_REGULATION", regulation: data.regulation})
-      })
+export const addComment = (regulation_id, description) => {
+ return(dispatch) => {
+   axios
+     .post('http://localhost:4000/comments', { description: description, regulation_id: regulation_id })
+     // .then(({data}) => {
+     //   dispatch({type: “SET_CURRENT_REGULATION”, regulation: data.regulation})
+     // })
+ }
 
-  }
 }

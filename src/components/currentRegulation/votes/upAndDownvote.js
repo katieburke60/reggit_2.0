@@ -25,7 +25,7 @@ class UpAndDownVote extends Component {
   render() {
     return (
     <div>
-      <h3>What do you think?</h3>
+      <div className="header1">What do you think?</div>
       <div className="votes-container">
           <button className="btn-default" onClick={this.handleUpVoteClicked}>I'm for it</button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -6,8 +6,13 @@ import VoteList from '../currentRegulation/votes/VoteList'
 import RegulationBlob from '../currentRegulation/body/RegulationBlob'
 import { getRegulation } from '../../actions'
 import UpAndDownvote from '../currentRegulation/votes/upAndDownvote'
+<<<<<<< HEAD
 import SubmitComment from '../currentRegulation/submitComments/submitComment'
 import '../../App.css'
+=======
+import SubmitComment from '../currentRegulation/comments/submitComment'
+
+>>>>>>> f29c009c636e419ea270c0d2423c305b741da985
 
 class SelectedRegulation extends Component {
   // componentWillReceiveProps(nextProps) {
@@ -45,10 +50,11 @@ class SelectedRegulation extends Component {
             </div>
           </div>
           <div className="col-md-4">
+            <VoteList regulation={this.props.regulation}/>
             <CommentList comments={this.props.regulation.comments}/>
             <UpAndDownvote regulation={this.props.regulation} regulationId={this.props.regulation.id}/>
-            <VoteList value={this.props.regulation.votesFor}/>
-            <SubmitComment value={this.props.regulation.comments}/>
+            <SubmitComment regulation_id={this.props.regulation.id}/>
+
           </div>
         </div>
 
