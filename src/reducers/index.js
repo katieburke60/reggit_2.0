@@ -5,7 +5,6 @@ import RegulationsReducer from './regulationsReducer'
 import CurrentRegulationReducer from './currentRegulationReducer'
 import CategoriesReducer from './categoriesReducer'
 
-
 export default combineReducers({
   regulations: RegulationsReducer,
   currentRegulation: CurrentRegulationReducer,

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
-export default class VoteList extends React.Component {
+class VoteList extends Component {
   render() {
     let votesFor = this.props.regulation.votes.filter((vote) => vote.vote === "up").length
     let votesAgainst = this.props.regulation.votes.length - votesFor
@@ -22,3 +23,9 @@ export default class VoteList extends React.Component {
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    regulation: state.currentRegulation
+  }
+}
+export default connect(mapStateToProps)(VoteList)

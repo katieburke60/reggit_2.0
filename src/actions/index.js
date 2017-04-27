@@ -33,14 +33,8 @@ export const addVote = (regulation, vote) => {
   return(dispatch) => {
     axios
       .post('http://localhost:4000/votes', { vote: vote, regulation_id: regulation.id })
+        .then(({data}) => {
+            dispatch({type: 'ADD_VOTE', vote: data})
+        })
     }
-}
-export const addComment = (regulation_id, description) => {
- return(dispatch) => {
-   axios
-     .post('http://localhost:4000/comments', { description: description, regulation_id: regulation_id })
-     // .then(({data}) => {
-     //   dispatch({type: “SET_CURRENT_REGULATION”, regulation: data.regulation})
-     // })
- }
 }
