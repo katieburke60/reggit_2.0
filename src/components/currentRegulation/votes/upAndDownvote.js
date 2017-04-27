@@ -1,9 +1,8 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addVote, updateVote, getRegulation } from '../../../actions'
+import { addVote, getRegulation } from '../../../actions'
 import { bindActionCreators } from 'redux'
-import { SelectedRegulation } from '../../regulations/SelectedRegulation'
 
 class UpAndDownVote extends Component {
   constructor(props) {
@@ -23,6 +22,7 @@ class UpAndDownVote extends Component {
     event.preventDefault();
     this.props.addVote(this.props.regulation.id, "up")
     this.props.getRegulation(this.props.regulation.id)
+
   }
 
   render() {
@@ -47,7 +47,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     addVote: addVote,
-    getRegulation: getRegulation ,
+    getRegulation: getRegulation,
   }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(UpAndDownVote)

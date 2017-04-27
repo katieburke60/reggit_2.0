@@ -40,7 +40,7 @@ export const addVote = (regulationId, vote) => {
     })
 
     .then(({data}) => {
-      dispatch({type:'SUBMIT_VOTE',vote: vote, regulation_id: regulationId})
+      dispatch({type:'SUBMIT_VOTE',vote, regulationId})
     })
   }
 }

@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 import { addVote, updateVote,getRegulation } from '../../../actions/index'
 
 class VoteList extends React.Component {
+
   render() {
 
     let votesFor = this.props.regulation.filter((vote) => vote.vote === "up").length
@@ -28,6 +29,7 @@ class VoteList extends React.Component {
   }
 }
   const mapStateToProps = (state) => {
+
     return {
     regulation: state.currentRegulation.votes
     }
@@ -35,7 +37,6 @@ class VoteList extends React.Component {
 
     const mapDispatchToProps = (dispatch) => {
       return bindActionCreators({
-
         getRegulation: getRegulation,
       }, dispatch);
     }
