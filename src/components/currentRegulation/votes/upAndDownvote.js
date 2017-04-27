@@ -30,6 +30,9 @@ class UpAndDownVote extends Component {
     );
   }
 }
+// const mapStateToProps = (state) => {
+//   regulation: this.state.currentRegulation
+// }
 const mapDispatchToProps = (dispatch) => {
   return {
     submitVote: function(regulation, vote){

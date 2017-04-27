@@ -33,5 +33,8 @@ export const addVote = (regulation, vote) => {
   return(dispatch) => {
     axios
       .post('http://localhost:4000/votes', { vote: vote, regulation_id: regulation.id })
+        .then(({data}) => {
+            dispatch({type: 'ADD_VOTE', vote: data})
+        })
     }
 }

@@ -3,11 +3,10 @@ export default (state={comments: [], regulation_body: {}, votes: []}, action) =>
     case "SET_CURRENT_REGULATION":
       return action.regulation
     case 'ADD_COMMENT':
-      return {
-          comments: state.comments.concat(action.comment),
-          regulation_body: state.regulation_body,
-          votes: state.votes,
-        }
+      return Object.assign({}, state, {comments: state.comments.concat(action.comment)})
+    case 'ADD_VOTE':
+      return Object.assign({}, state, {votes: state.votes.concat(action.vote)})
+
     default:
       return state
   }
