@@ -6,3 +6,12 @@ export default (state=[], action) => {
       return state
     }
 }
+
+// function voteCounter (state=[upvotes , downvotes], action) {
+  //if (action.type = 'UPVOTE') {
+    //return state[0] + 1
+  //elseif (action.type = 'DOWNVOTE')
+    //return state[1] - 1
+  //else return state
+// }
+// }

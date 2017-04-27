@@ -28,7 +28,7 @@ class SelectedRegulation extends Component {
           <div className="subtitle">Get heard</div>
         </div>
         <div>
-          <div className="col-md-8">
+          <div className="col-sm-8">
             <div className="regulation-title">
               {this.props.regulation.title}
             </div>
@@ -43,11 +43,11 @@ class SelectedRegulation extends Component {
               <RegulationBlob body={this.props.regulation.regulation_body}/>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-sm-4">
             <VoteList regulation={this.props.regulation}/>
             <CommentList comments={this.props.regulation.comments}/>
             <UpAndDownvote regulation={this.props.regulation}/>
-            <SubmitComment regulation_id={this.props.regulation.id}/>
+            <SubmitComment />
           </div>
         </div>
       </div>
