@@ -22,14 +22,13 @@ class SelectedRegulation extends Component {
 
   render() {
     return (
-
       <div className="wrap full-width">
         <div className="topper">
           <h1 className="titlename"> Reggit         </h1>
           <div className="subtitle">Get heard</div>
         </div>
         <div>
-          <div className="col-md-8">
+          <div className="col-sm-8">
             <div className="regulation-title">
               {this.props.regulation.title}
             </div>
@@ -44,23 +43,20 @@ class SelectedRegulation extends Component {
               <RegulationBlob body={this.props.regulation.regulation_body}/>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-sm-4">
             <VoteList regulation={this.props.regulation}/>
-            <UpAndDownvote regulation={this.props.regulation} regulationId={this.props.regulation.id}/>
-            <SubmitComment regulation_id={this.props.regulation.id}/>
             <CommentList comments={this.props.regulation.comments}/>
-
+            <UpAndDownvote regulation={this.props.regulation}/>
+            <SubmitComment />
           </div>
         </div>
-
       </div>
     )}
   }
-
 const mapStateToProps = (state) => {
   return {
-    regulation: state.currentRegulation
+    regulation: state.currentRegulation,
+    regulations: state.regulations.all
   }
 }
-
 export default connect(mapStateToProps)(SelectedRegulation)

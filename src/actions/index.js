@@ -29,34 +29,12 @@ export const getRegulation = (regulationId) => {
       })
   }
 }
-export const addVote = (regulationId, vote) => {
-
+export const addVote = (regulation, vote) => {
   return(dispatch) => {
-
-    axios({
-      method: 'POST',
-      url:'http://localhost:4000/votes',
-      data:{ vote: vote, regulation_id: regulationId },
-    })
-
-    .then(({data}) => {
-      dispatch({type:'SUBMIT_VOTE',vote, regulationId})
-    })
-  }
-}
-
-
-
-export const addComment = (regulation_id, description) => {
- return(dispatch) => {
-   axios({
-     method: 'POST',
-     url:'http://localhost:4000/comments',
-     data:{regulation_id: regulation_id, description: description}
-   })
-
-     .then(({data}) => {
-       dispatch({type: 'SUBMIT_COMMENT', regulation_id: regulation_id, description: description })
-     })
-   }
+    axios
+      .post('http://localhost:4000/votes', { vote: vote, regulation_id: regulation.id })
+        .then(({data}) => {
+            dispatch({type: 'ADD_VOTE', vote: data})
+        })
+    }
 }

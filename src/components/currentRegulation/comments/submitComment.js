@@ -1,49 +1,68 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import { connect } from 'react-redux'
-import { addComment, getRegulation} from '../../../actions'
-import {bindActionCreators} from 'redux'
-import { SelectedRegulation } from '../../regulations/SelectedRegulation'
-
 
 class SubmitComment extends Component {
  constructor(props) {
    super(props)
-
    this.state={
      description: ''
    }
-   this.handleChange = this.handleChange.bind(this);
-   this.handleSubmit= this.handleSubmit.bind(this)
+   this.handleChange = this.handleChange.bind(this)
+   this.handleSubmit = this.handleSubmit.bind(this)
    }
-   handleChange(e) {
-       this.setState({
-          description: e.target.value});
+ handleChange(event) {
+   this.setState({
+     description: event.target.value
+   })
+ }
+ handleSubmit(e) {
+   e.preventDefault()
+   return (
+     axios
+       .post('http://localhost:4000/comments',
+       { description: this.state.description, regulation: this.props.regulation })
+       .then(({data}) => {
+           this.props.addComment(data)
+        })
+        .then(
+          this.setState ({
+            description: ''
+          }))
+     )
    }
-   handleSubmit(e) {
-
-    e.preventDefault();
-    this.props.addComment(this.props.regulation_id, this.state.description);
-
+ render() {
+   return (
+     <form onSubmit={this.handleSubmit}>
+       <div className='addcomment-container'>
+           <br/>
+           <textarea className='regulation-summary'
+               value={this.state.description}
+               rows='5' cols='50'
+               onChange={this.handleChange}
+               placeholder='Your feedback'></textarea>
+           <input type='submit' className='btn-default regulation-summary' />
+       </div>
+     </form>
+   );
+ }
+}
+ function addComment(comment) {
+   return {
+     type: 'ADD_COMMENT',
+     comment: comment
+   }
+ }
+const mapStateToProps = (state) => {
+  return {
+    regulation: state.currentRegulation
   }
-   render() {
-     return (
-       <form onSubmit={this.handleSubmit}>
-         <div className='addcomment-container'>
-             <br/>
-             <textarea rows='5' cols='50' placeholder='Your feedback' value={this.state.value} onChange={this.handleChange} ></textarea>
-              <input type='submit' />
-         </div>
-       </form>
-     );
-   }
- }
-
- const mapStateToProps = (state) => {
-   regulation: state.currentRegulation.comments
- }
+}
  const mapDispatchToProps = (dispatch) => {
-   return bindActionCreators({
-     addComment: addComment,
-   }, dispatch);
+   return {
+     addComment: function(comment){
+       dispatch(addComment(comment))
+     }
+   }
  }
 export default connect(mapStateToProps, mapDispatchToProps)(SubmitComment)
