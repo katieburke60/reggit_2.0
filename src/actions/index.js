@@ -40,20 +40,23 @@ export const addVote = (regulationId, vote) => {
     })
 
     .then(({data}) => {
-      dispatch({type:'SUBMIT_VOTE'},
-      {vote: vote, regulation_id: regulationId})
+      dispatch({type:'SUBMIT_VOTE',vote: vote, regulation_id: regulationId})
     })
-    }
-
+  }
 }
+
+
 
 export const addComment = (regulation_id, description) => {
  return(dispatch) => {
-   axios
-     .post('http://localhost:4000/comments', { description: description, regulation_id: regulation_id })
-     // .then(({data}) => {
-     //   dispatch({type: “SET_CURRENT_REGULATION”, regulation: data.regulation})
-     // })
- }
+   axios({
+     method: 'POST',
+     url:'http://localhost:4000/comments',
+     data:{regulation_id: regulation_id, description: description}
+   })
 
+     .then(({data}) => {
+       dispatch({type: 'SUBMIT_COMMENT', regulation_id: regulation_id, description: description })
+     })
+   }
 }

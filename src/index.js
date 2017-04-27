@@ -38,9 +38,12 @@ const store = createStore(
 )
 const Home = () => {
   return (
-  <div>
+
+  <div className="welcomepage" >
     <h1>Welcome to Reggit. Your source for what the government is working on.</h1>
     <Link to="/regulations">See all regulations</Link>
+
+
   </div>
   )
 }

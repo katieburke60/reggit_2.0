@@ -1,16 +1,14 @@
 
-import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addVote } from '../../../actions'
-import { SelectedRegulation } from '../../regulations/SelectedRegulation'
+import React from 'react'
+import { bindActionCreators } from 'redux'
+import { addVote, updateVote,getRegulation } from '../../../actions/index'
 
- class VoteList extends React.Component {
-
+class VoteList extends React.Component {
   render() {
 
-    let votesFor = this.props.regulation.votes.filter((vote) => vote.vote === "up").length
-    let votesAgainst = this.props.regulation.votes.length - votesFor
-
+    let votesFor = this.props.regulation.filter((vote) => vote.vote === "up").length
+    let votesAgainst = this.props.regulation.length - votesFor
     return (
       <div>
         <div style={{width:'100%'}}>
@@ -29,11 +27,19 @@ import { SelectedRegulation } from '../../regulations/SelectedRegulation'
     )
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    regulation: state.currentRegulation
+  const mapStateToProps = (state) => {
+    return {
+    regulation: state.currentRegulation.votes
+    }
   }
-}
 
-export default connect(mapStateToProps)(VoteList)
+    const mapDispatchToProps = (dispatch) => {
+      return bindActionCreators({
+
+        getRegulation: getRegulation,
+      }, dispatch);
+    }
+
+
+
+  export default connect(mapStateToProps, mapDispatchToProps)(VoteList)

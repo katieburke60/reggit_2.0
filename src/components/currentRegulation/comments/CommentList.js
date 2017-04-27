@@ -1,14 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import Comment from './Comment'
+import {bindActionCreators} from 'redux'
+import { addComment, updateVote,getRegulation } from '../../../actions/index'
 
-export default (props) => {
-
-  const numComments = props.comments.length
+class CommentList extends React.Component {
+render(){
+  let numComments = this.props.comments.length
   return (
     <div>
     &nbsp;&nbsp;&nbsp;&nbsp;
       <div className="comments-list">
-          {props.comments.map((comment) => <Comment
+          {this.props.comments.map((comment) => <Comment
             key={comment.id}
             comment_body={comment.description}
           />)
@@ -18,3 +21,15 @@ export default (props) => {
     </div>
   )
 }
+}
+const mapStateToProps = (state) => {
+  return {
+    regualtion: state.currentRegulation.comments
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    getRegulation: getRegulation,
+  }, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)( CommentList )
