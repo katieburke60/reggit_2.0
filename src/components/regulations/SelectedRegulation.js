@@ -7,17 +7,13 @@ import RegulationBlob from '../currentRegulation/body/RegulationBlob'
 import { getRegulation } from '../../actions'
 import UpAndDownvote from '../currentRegulation/votes/upAndDownvote'
 import SubmitComment from '../currentRegulation/comments/submitComment'
-
+import ActionFollowButton from '../currentRegulation/follows/ActionFollowButton'
 
 class SelectedRegulation extends Component {
-  // componentWillReceiveProps(nextProps) {
-  //   if(nextProps.match.params.regulationId === this.props.match.params.regulationId) { return }
-  //   let regulationId = nextProps.match.params.regulationId
-  //   this.props.dispatch(getRegulation(regulationId))
-  // }
-  componentDidMount() {
+
+  componentWillMount() {
     let regulationId = this.props.match.params.regulationId
-    this.props.dispatch(getRegulation(regulationId))
+    this.props.getRegulation(regulationId)
   }
 
   render() {
@@ -36,14 +32,16 @@ class SelectedRegulation extends Component {
               {this.props.regulation.summary}
             </div>
             <div className="reg-other">Topic: {this.props.regulation.category_name}</div>
-            <div className="reg-other">Status: {this.props.regulation.reg_status}</div>
+            <div className="reg-other">Status: {this.props.regulation.status}</div>
+            <div>Agency POC: {this.props.regulation.contact}</div>
             <br/>
             <p className='reg-detail-flag'>Get Smart: Here's The Full Reg Text</p>
             <div className="reg-text">
-              <RegulationBlob body={this.props.regulation.regulation_body}/>
+              {/* <RegulationBlob body={this.props.regulation.action_body}/> */}
             </div>
           </div>
           <div className="col-sm-4">
+            <ActionFollowButton regulation={this.props.regulation}/>
             <VoteList regulation={this.props.regulation}/>
             <CommentList comments={this.props.regulation.comments}/>
             <UpAndDownvote regulation={this.props.regulation}/>
@@ -60,5 +58,10 @@ const mapStateToProps = (state) => {
     regulations: state.regulations.all
   }
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getRegulation: (regulationId) => dispatch(getRegulation(regulationId))
+  }
+}
 
-export default connect(mapStateToProps)(SelectedRegulation)
+export default connect(mapStateToProps, mapDispatchToProps)(SelectedRegulation)

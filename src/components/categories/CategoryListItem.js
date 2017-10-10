@@ -11,6 +11,7 @@ class CategoryListItem extends Component {
   handleCatClicked(e) {
     e.preventDefault()
     this.props.dispatch({type: "FILTER_CATEGORY", category: this.props.name})
+    // .then(this.props.dispatch({type: 'SELECT_CATEGORY', category: this.props.category}))
   }
 
   render () {

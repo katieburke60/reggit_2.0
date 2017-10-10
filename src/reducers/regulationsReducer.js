@@ -10,20 +10,27 @@ export default (state={all: [], filtered: []}, action) => {
         all: state.all,
         filtered: state.all.filter((regulation) => regulation.category_name === action.category )
       }
+    case "FILTER_DEADLINE":
+      return {
+        all: state.all,
+        filtered: state.all.filter((regulation) => regulation.days_left < 30 && regulation.days_left > 0)
+      }
+    case "FILTER_NEWEST":
+      return {
+        all: state.all,
+        filtered: state.all.filter((regulation) => Math.ceil(Math.abs(new Date() - new Date(regulation.publication_date)) / (1000 * 3600 * 24)) < 5 )
+      }
+    case 'FILTER_ACTION_FOLLOWING':
+      return {
+        all: state.all,
+        filtered: action.citizen.actions
+      }
     case "CLEAR_FILTER": {
       return {
         all: state.all,
         filtered: state.all
       }
     }
-    // case "FILTER_VOTES":
-    //   const upper_limit = 30
-    //   return {
-    //     all: state.all,
-    //     //TODO: Think I need to map over votes or something
-    //     filtered: state.all.filter((regulation) => regulation.votes["up"].count > upper_limit)
-    //   }
-
     default:
       return state
   }

@@ -1,13 +1,13 @@
 /* eslint-disable */
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import RegulationListItem from './RegulationsListItem'
 import { getCategories, getRegulations } from '../../actions'
 
 class Regulations extends Component {
   componentDidMount(){
-    this.props.dispatch(getCategories())
-    this.props.dispatch(getRegulations())
+    this.props.getCategories()
+    this.props.getRegulations()
   }
   render() {
     const regulations = this.props.regulations.map((regulation) => {
@@ -29,5 +29,15 @@ const mapStateToProps = (state) => {
       regulations: state.regulations.filtered
     }
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getCategories: function() {
+      dispatch(getCategories())
+    },
+    getRegulations: function() {
+      dispatch(getRegulations())
+    }
+  }
+}
 
-export default connect(mapStateToProps)(Regulations);
+export default connect(mapStateToProps, mapDispatchToProps)(Regulations);

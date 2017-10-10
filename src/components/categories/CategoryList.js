@@ -18,13 +18,13 @@ class CategoryList extends Component {
       return <CategoryListItem
         key={category.id}
         name={category.name}
+        category={category}
       />
     })
     return (
       <div id="exTab2" className="cats">
       <ul className="nav nav-tabs">
-        <li className="active"><a href="#1a" data-toggle="tab" onClick={this.handleAllClicked}>All Regs</a></li>
-            {categories}
+        {categories}
       </ul>
 
     </div>
@@ -34,5 +34,6 @@ class CategoryList extends Component {
 const mapStateToProps = (state) => ({
     categories: state.categories
 })
+
 
 export default connect(mapStateToProps)(CategoryList);

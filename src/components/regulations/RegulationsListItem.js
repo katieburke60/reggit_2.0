@@ -10,8 +10,9 @@ class RegulationListItem extends Component {
     return (
       <div>
         <div className="tab-pane">
-          <p><Link to={`/regulations/${this.props.regulation.id}`}>
-          {this.props.regulation.title}</Link></p>
+          <p><strong><Link to={`/regulations/${this.props.regulation.id}`}>
+          {this.props.regulation.title}</Link> ({this.props.regulation.agency_full})</strong></p>
+          <p><i>{this.props.regulation.summary}</i></p>
         </div>
       </div>
     )

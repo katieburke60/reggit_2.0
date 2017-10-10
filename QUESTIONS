@@ -1,4 +1,0 @@
-1. How do we handle it if we want different reducers, but we still want stuff to be nested?
-2. What do we do if we're trying to move state out of components, but we still need it?
-3. If you setState are you overriding mapStateToProps?
-4. What is the order by which stuff is happening on the page and how do you change that? 

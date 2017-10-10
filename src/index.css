@@ -11,6 +11,10 @@
   font-family: 'Muli';
   padding-bottom: 10px;
 }
+#Navbar {
+  background-color: #2A2D4A;
+  color: white;
+}
 
 .btn-default {
   font-size: 16px;

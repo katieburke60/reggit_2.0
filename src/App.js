@@ -1,12 +1,15 @@
 /* eslint-disable */
 import { connect } from 'react-redux'
 import Regulations from './components/regulations/Regulations'
-import CategoryList from './components/categories/CategoryList'
+import OverallList from './components/categories/OverallList'
 import SelectedRegulation from './components/regulations/SelectedRegulation'
 import './App.css'
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import { BrowserRouter } from 'react-router'
+import NavBarMain from './components/NavBarMain'
+// import Grid from 'react-bootstrap/lib/Grid'
+// import Row from 'react-bootstrap/lib/Row'
 
 
 class App extends Component {
@@ -17,7 +20,8 @@ class App extends Component {
           <h1 className="titlename"> Reggit         </h1>
           <div className="subtitle">Get heard</div>
         </div>
-        <CategoryList />
+        <NavBarMain />
+        <OverallList />
         <Regulations />
       </div>
     );

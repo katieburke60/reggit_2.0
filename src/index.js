@@ -4,11 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
 import { createStore, applyMiddleware, compose } from 'redux'
-import { Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import './index.css'
 
 import UpAndDownvote from './components/currentRegulation/votes/upAndDownvote'
+import LoginPage from './components/currentRegulation/LoginPage'
+//update eventually
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import SelectedRegulation from './components/regulations/SelectedRegulation'
@@ -50,8 +52,10 @@ ReactDOM.render(
    <Router history={history}>
      <div>
        <Route exact path='/' component={Home} />
+       <Route exact path='/login' component={LoginPage} />
        <Route exact path='/regulations' component={App} />
        <Route exact path='/regulations/:regulationId' component={SelectedRegulation} />
+       <Route exact path='/categories/:categoryId' component={App} />
     </div>
    </Router>
  </Provider>,
