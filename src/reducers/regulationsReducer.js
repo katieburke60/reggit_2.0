@@ -10,19 +10,21 @@ export default (state={all: [], filtered: []}, action) => {
         all: state.all,
         filtered: state.all.filter((regulation) => regulation.category_name === action.category )
       }
+    // case 'FILTER_POSTED_DATE':
+    //   return {
+    //     all: state.all,
+    //     filtered: state.all.filter((regulation) => {
+    //       let today = new Date()
+    //       var diffDays = Math.round(Math.abs((today.getTime() - regulation.publication_date.getTime())/(oneDay)))
+    //       diffDays >
+    //     })
+    //   }
     case "CLEAR_FILTER": {
       return {
         all: state.all,
         filtered: state.all
       }
     }
-    // case "FILTER_VOTES":
-    //   const upper_limit = 30
-    //   return {
-    //     all: state.all,
-    //     //TODO: Think I need to map over votes or something
-    //     filtered: state.all.filter((regulation) => regulation.votes["up"].count > upper_limit)
-    //   }
 
     default:
       return state

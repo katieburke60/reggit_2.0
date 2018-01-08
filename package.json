@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
+    "babel-loader": "^7.1.2",
     "babel-plugin-react-css-modules": "^2.6.1",
     "bootstrap": "^3.3.7",
     "history": "^4.6.1",
@@ -18,9 +20,12 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "bootstrap": "^3.3.7",
     "react-bootstrap": "^0.30.9",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "webpack": "^3.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

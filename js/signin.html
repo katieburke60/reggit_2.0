@@ -1,0 +1,24 @@
+<head>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/wrappers/api.js"></script>
+  <script src="/models/account.js"></script>
+  <script src="/signin.js"></script>
+</head>
+
+<body>
+  <div class='container'>
+    <form id='signin'>
+      <div>
+        <label htmlFor="username">Username</label>
+        <input type="text" id='username' name='account[username]'/>
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input type="password" id='password' name='account[password]'/>
+      </div>
+      <div>
+        <input type="submit"/>
+      </div>
+    </form>
+  </div>
+</body>

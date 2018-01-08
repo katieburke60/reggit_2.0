@@ -12,6 +12,7 @@ import UpAndDownvote from './components/currentRegulation/votes/upAndDownvote'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import SelectedRegulation from './components/regulations/SelectedRegulation'
+import SigninPage from './components/Signin'
 import SubmitComment from './components/currentRegulation/comments/submitComment'
 import createHistory from 'history/createBrowserHistory'
 import {
@@ -50,6 +51,7 @@ ReactDOM.render(
    <Router history={history}>
      <div>
        <Route exact path='/' component={Home} />
+       <Route exact path='/signin' component={SigninPage} />
        <Route exact path='/regulations' component={App} />
        <Route exact path='/regulations/:regulationId' component={SelectedRegulation} />
     </div>
